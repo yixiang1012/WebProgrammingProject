@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f2f5f8;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #343a40;
+        }
+        .container {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: gray;
+            font-weight: bold;
+        }
+        .accordion-button {
+            font-size: 16px;
+            font-weight: bold;
+            color: black;
+            background-color: #ffffff;
+            border: none;
+        }
+        .accordion-button:hover {
+            color: #0056b3;
+        }
+        .accordion-body {
+            font-size: 15px;
+            color: #495057;
+            line-height: 1.7;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #6c757d;
+        }
+        .back-button {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        <div class="accordion" id="faqAccordion">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        My phone charges slowly, what should I do?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Solution:<br>
+                        1. Ensure that the charger and cable are intact.<br>
+                        2. Clean the charging port to avoid dust and debris buildup.<br>
+                        3. Try using the original charger.<br>
+                        4. Close background apps to reduce power consumption.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        My tablet shuts down automatically, how should I handle this?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Solution:<br>
+                        1. Check battery status to ensure sufficient charge.<br>
+                        2. Check for system updates and update to the latest version.<br>
+                        3. Close unnecessary apps to save power.<br>
+                        4. If the issue persists, consider replacing the battery or contacting repair service.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        My phone screen is unresponsive to touch, how can I fix it?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Solution:<br>
+                        1. Clean the screen to ensure there is no dirt or grease.<br>
+                        2. Restart the device to see if it recovers.<br>
+                        3. Remove the screen protector to rule out any issues with it.<br>
+                        4. If ineffective, contact a professional repair service.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        My phone overheats significantly, what can I do to fix it?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Solution:<br>
+                        1. Avoid using the phone while charging.<br>
+                        2. Close unnecessary background apps.<br>
+                        3. Limit time spent on high-performance games or video playback.<br>
+                        4. If overheating persists, check for system updates.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        My tablet can't connect to Wi-Fi, how do I fix it?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Solution:<br>
+                        1. Ensure the Wi-Fi password is correct.<br>
+                        2. Restart the device and router.<br>
+                        3. Forget the network and reconnect.<br>
+                        4. If the issue persists, try resetting network settings.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        My apps crash frequently, how can I resolve this?
+                    </button>
+                </h2>
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Solution:<br>
+                        1. Make sure the app is updated to the latest version.<br>
+                        2. Clear the app's cache and data.<br>
+                        3. Restart the device to clear memory.<br>
+                        4. If the issue persists, consider reinstalling the app.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        My tablet stylus is not working properly, what should I do?
+                    </button>
+                </h2>
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Solution:<br>
+                        1. Ensure the stylus has enough battery.<br>
+                        2. Check the connection between the tablet and stylus.<br>
+                        3. Restart the tablet and re-pair the stylus.<br>
+                        4. If still not working, check for system updates.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingEight">
+                    <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                        My phone camera won't focus, how can I fix this?
+                    </button>
+                </h2>
+                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Solution:<br>
+                        1. Clean the lens to remove dust or fingerprints.<br>
+                        2. Try closing and reopening the camera app.<br>
+                        3. Check for updates to the camera app.<br>
+                        4. If the issue persists, contact a professional repair service.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-button">
+            <a href="support center.html" class="btn btn-secondary">Back</a>
+        </div>
+
+        <div class="footer">
+            <p>If you need further assistance, please contact customer service.</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

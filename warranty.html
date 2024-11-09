@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Extended Warranty</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #343a40;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #6c757d;
+        }
+       .back-button {
+            margin-top: 20px; 
+        }
+        }
+        .btn-back:hover {
+            background-color: #e9ecef; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Buy Extended Warranty</h1>
+        
+        <form id="warrantyForm" onsubmit="return handleSubmit(event)">
+            <div class="form-group">
+                <label for="customerName">Customer Name</label>
+                <input type="text" class="form-control" id="customerName" placeholder="Please enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="deviceName">Device Name</label>
+                <input type="text" class="form-control" id="deviceName" placeholder="Please enter the device name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="warrantyDuration">Warranty Duration</label>
+                <select class="form-control" id="warrantyDuration" required>
+                    <option value="">Select warranty duration</option>
+                    <option value="1 year">1 Year</option>
+                    <option value="2 years">2 Years</option>
+                    <option value="3 years">3 Years</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Contact Number</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Please enter your contact number" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Submit Purchase</button>
+        </form>
+        
+        <div class="back-button">
+            <a href="support center.html" class="btn btn-primary btn-block">Back</a>
+        </div>	
+        
+        <div class="footer">
+            <p>Thank you for choosing our extended warranty service!</p>
+        </div>
+    </div>
+
+    <script>
+       function handleSubmit(event) {
+            event.preventDefault(); 
+            
+            alert("Submitted successfully!");
+
+            window.location.href = "support center.html"; // Ensure this file exists
+        }
+    </script>
+
+</body>
+</html>

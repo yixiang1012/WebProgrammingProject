@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <style>
+    /* 页面通用样式 */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e5e4e1;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    h1, h2, h3 {
+      margin: 0;
+      font-weight: normal;
+    }
+    /* Header */
+    header {
+      text-align: center;
+      padding: 40px;
+      background-color: #3f4b7f;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+    }
+    /* 主体内容样式 */
+    .section {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 30px;
+      background-color: #f7f8fc;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    /* mission&vision-style */
+    #mission-vision {
+      background-color: #e8eefb;
+      padding: 30px;
+      border-radius: 12px;
+    }
+    #mission-vision h2 {
+      font-size: 24px;
+      color: #333;
+    }
+    #mission-vision h3 {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    /* container */
+    .box {
+      background-color: #d0daf6;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: left;
+      margin: 15px 0;
+    }
+    .box p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #555;
+    }
+    /* overview content-style */
+    .overview {
+	background-color: #d0daf6;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .overview div {
+      background-color: #e3eaf7;
+      padding: 25px;
+      border-radius: 12px;
+      flex: 1;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .overview h2 {
+      font-size: 22px;
+      color: #3f4b7f;
+      margin-bottom: 10px;
+    }
+    .overview p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #555;
+    }
+    /* team members-style */
+    #team-members {
+      text-align: center;
+      padding: 50px;
+      background-color: #e8eefb;
+      border-radius: 12px;
+    }
+    #team-members h2 {
+	 font-family: Bookmen Old style;
+      font-size: 30px;
+      color: #3f4b7f;
+      margin-bottom: 20px;
+    }
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 35px;
+    }
+    .member {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      width: 180px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .member:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .member img {
+      width: 99px;
+      height:110px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .member h3 {
+      font-size: 18px;
+      color: #333;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .member p {
+      font-size: 14px;
+      color: #666;
+    }
+    /* footer-style */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #3f4b7f;
+      color: #fff;
+      font-size: 16px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    About Us
+  </header>
+
+  <!-- mission and vision -->
+  <section id="mission-vision" class="section">
+    <div>
+      <h2>Our Mission & Vision</h2>
+      <div class="box">
+        <h3>MISSION</h3>
+        <p>Our mission is to provide users with an efficient and convenient product screening, comparison, and research platform, so that every user can quickly find suitable mobile phones and accessories and easily complete the purchase.</p>
+        <h3>VISION</h3>
+        <p>We will become the user's preferred smartphone and accessories platform, simplifying the product screening and purchasing process, allowing every user to easily find and own the technology products they want.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- content -->
+  <section class="overview section">
+    <div>
+      <h2>Company Overview</h2>
+      <p>We are a semi-e-commerce platform focusing on smartphones and their accessories, providing users with convenient product screening, comparison, research, and purchasing experience. Our target users are those who want to find their favorite technology products efficiently. We also provide after-sales support, repair appointment, and extended warranty services, allowing users to enjoy a full range of shopping experiences.</p>
+    </div>
+    <div>
+      <h2>Future Plans or Roadmap</h2>
+      <p>We plan to further expand the product line of accessories compatible with mobile phones, including headphones, chargers, data cables, protective cases, and screen protectors. By providing a rich and diverse selection of accessories, we aim to meet diverse user needs in one stop. We will optimize the review area, encourage users to share their experience, and help new users make better purchasing decisions.</p>
+    </div>
+  </section>
+
+  <!-- team members -->
+  <section id="team-members" class="section">
+    <h2>Our Team Members</h2>
+    <div class="team">
+      <div class="member">
+        <img src="member_image/edmund.jpg" alt="Edmund Ong">
+        <h3>Edmund Ong</h3>
+        <p>Joint Venturer<br>Assistant to the President</p>
+      </div>
+      <div class="member">
+        <img src="member_image/teh.jpg" alt="Teh Yi Xiang">
+        <h3>Teh Yi Xiang</h3>
+        <p>Joint Venturer<br>President</p>
+      </div>
+      <div class="member">
+        <img src="member_image/tai.jpg" alt="Tai Chee Lok">
+        <h3>Tai Chee Lok</h3>
+        <p>Joint Venturer<br>Assistant to the President</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <p>Terms & Support</p>
+  </footer>
+
+</body>
+</html>
