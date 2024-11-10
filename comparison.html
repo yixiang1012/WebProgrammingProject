@@ -3,46 +3,366 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Selection Output</title>
+    <title>Compare Phone Models</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Roboto, Helvetica, sans-serif;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 30px 50px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        .topic {
+            text-align: center;
+            color: black;
+            font-weight: bold;
+            font-size: 30px;
+            margin-top: 20px;
+        }
+
+        .select-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px; 
+            margin-top: 20px;
+        }
+
+        .select-box {
+            width: 30%;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        #output {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .output-box {
+            width: 40%;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px;
+            line-height: 1.5;
+        }
+
+        .phone-image {
+            width: 130px;         
+            height: 170px;           
+        }
+
+    </style>
 </head>
 <body>
-    <h2>Select an option to see the output:</h2>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="support.html">Support</a></li>
+    </ul>
 
-    <!-- Select dropdown -->
-    <select id="optionSelect" onchange="displayOutput()">
-        <option value="">--Select an option--</option>
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
-    </select>
+    <div class="topic">
+        <h2>Compare Phone Models</h2>
+    </div>
 
-    <!-- Output area -->
-    <div id="output" style="margin-top: 20px; font-weight: bold;"></div>
+    <div class="select-container">
+        <select id="optionSelect1" class="select-box" onchange="displayOutput()">
+            <option value="">--Select Model--</option>
+            <option value="iPhone 13">iPhone 13</option>
+            <option value="iPhone 15">iPhone 15</option>
+            <option value="iPhone 15 Pro">iPhone 15 Pro</option>
+            <option value="iPhone 15 Plus">iPhone 15 Plus</option>
+            <option value="iPhone 16">iPhone 16</option>
+            <option value="iPhone 16 Plus">iPhone 16 Plus</option>
+            <option value="iPhone 11">iPhone 11</option>
+            <option value="iPhone SE 2">iPhone SE 2</option>
+            <option value="HUAWEI Nova 12i">HUAWEI Nova 12i</option>
+            <option value="HUAWEI Nova 10 SE">HUAWEI Nova 10 SE</option>
+            <option value="HUAWEI Nova 9">HUAWEI Nova 9</option>
+            <option value="HUAWEI P40">HUAWEI P40</option>
+            <option value="HUAWEI Pura 70">HUAWEI Pura 70</option>
+            <option value="HUAWEI Pura 70 Pro">HUAWEI Pura 70 Pro</option>
+            <option value="HUAWEI P60 Pro">HUAWEI P60 Pro</option>
+            <option value="HUAWEI Nova 8">HUAWEI Nova 8</option>
+            <option value="Samsung Galaxy Xcover 5">Samsung Galaxy Xcover 5</option>
+            <option value="Samsung Galaxy Xcover6 Pro (5G)">Samsung Galaxy Xcover6 Pro (5G)</option>
+            <option value="Samsung Galaxy S22 Ultra 5G">Samsung Galaxy S22 Ultra 5G</option>
+            <option value="Samsung Galaxy S23 (5G)">Samsung Galaxy S23 (5G)</option>
+            <option value="Samsung Galaxy S22 5G">Samsung Galaxy S22 5G</option>
+            <option value="Samsung Galaxy A54 (5G)">Samsung Galaxy A54 (5G)</option>
+            <option value="Samsung Galaxy A14 (5G)">Samsung Galaxy A14 (5G)</option>
+            <option value="Samsung Galaxy S21 (5G)">Samsung Galaxy S21 (5G)</option>
+        </select>
 
-    <!-- JavaScript to change output based on selection -->
+        <select id="optionSelect2" class="select-box" onchange="displayOutput()">
+            <option value="">--Select Model--</option>
+            <option value="iPhone 13">iPhone 13</option>
+            <option value="iPhone 15">iPhone 15</option>
+            <option value="iPhone 15 Pro">iPhone 15 Pro</option>
+            <option value="iPhone 15 Plus">iPhone 15 Plus</option>
+            <option value="iPhone 16">iPhone 16</option>
+            <option value="iPhone 16 Plus">iPhone 16 Plus</option>
+            <option value="iPhone 11">iPhone 11</option>
+            <option value="iPhone SE 2">iPhone SE 2</option>
+            <option value="HUAWEI Nova 12i">HUAWEI Nova 12i</option>
+            <option value="HUAWEI Nova 10 SE">HUAWEI Nova 10 SE</option>
+            <option value="HUAWEI Nova 9">HUAWEI Nova 9</option>
+            <option value="HUAWEI P40">HUAWEI P40</option>
+            <option value="HUAWEI Pura 70">HUAWEI Pura 70</option>
+            <option value="HUAWEI Pura 70 Pro">HUAWEI Pura 70 Pro</option>
+            <option value="HUAWEI P60 Pro">HUAWEI P60 Pro</option>
+            <option value="HUAWEI Nova 8">HUAWEI Nova 8</option>
+            <option value="Samsung Galaxy Xcover 5">Samsung Galaxy Xcover 5</option>
+            <option value="Samsung Galaxy Xcover6 Pro (5G)">Samsung Galaxy Xcover6 Pro (5G)</option>
+            <option value="Samsung Galaxy S22 Ultra 5G">Samsung Galaxy S22 Ultra 5G</option>
+            <option value="Samsung Galaxy S23 (5G)">Samsung Galaxy S23 (5G)</option>
+            <option value="Samsung Galaxy S22 5G">Samsung Galaxy S22 5G</option>
+            <option value="Samsung Galaxy A54 (5G)">Samsung Galaxy A54 (5G)</option>
+            <option value="Samsung Galaxy A14 (5G)">Samsung Galaxy A14 (5G)</option>
+            <option value="Samsung Galaxy S21 (5G)">Samsung Galaxy S21 (5G)</option>
+        </select>
+    </div>
+
+    <!-- Output area with two containers -->
+    <div id="output">
+        <div id="output1" class="output-box"></div>
+        <div id="output2" class="output-box"></div>
+    </div>
+
     <script>
-        function displayOutput() {
-            const selectedValue = document.getElementById("optionSelect").value;
-            const outputDiv = document.getElementById("output");
+    const phoneSpecs = {
+      "iPhone 13": {
+        display: "6.1-inch Super Retina XDR",
+        processor: "A15 Bionic chip",
+        camera: "Dual 12MP (Wide, Ultra Wide)",
+        battery: "Up to 19 hours video playback",
+        image: "phone_image/iphone13.png"
+      },
+      "iPhone 15": {
+        display: "6.1-inch Super Retina XDR",
+        processor: "A16 Bionic chip",
+        camera: "Dual 48MP (Wide, Ultra Wide)",
+        battery: "Up to 20 hours video playback",
+        image: "phone_image/iphone15.png"
+      },
+      "iPhone 15 Pro": {
+        display: "6.1-inch Super Retina XDR",
+        processor: "A17 Pro chip",
+        camera: "Triple 48MP (Wide, Ultra Wide, Telephoto)",
+        battery: "Up to 23 hours video playback",
+        image: "phone_image/iphone15pro.png"
+      },
+      "iPhone 15 Plus": {
+        display: "6.7-inch Super Retina XDR",
+        processor: "A16 Bionic chip",
+        camera: "Dual 48MP (Wide, Ultra Wide)",
+        battery: "Up to 26 hours video playback",
+        image: "phone_image/iphone15plus.png"
+      },
+      "iPhone 16": {
+        display: "6.1-inch Super Retina XDR",
+        processor: "A18 chip",
+        camera: "Dual 50MP (Wide, Ultra Wide)",
+        battery: "Up to 22 hours video playback",
+        image: "phone_image/iphone16.png"
+      },
+      "iPhone 16 Plus": {
+        display: "6.7-inch Super Retina XDR",
+        processor: "A18 chip",
+        camera: "Dual 50MP (Wide, Ultra Wide)",
+        battery: "Up to 29 hours video playback",
+        image: "phone_image/iphone16plus.png"
+      },
+      "iPhone 11": {
+        display: "6.1-inch Liquid Retina HD",
+        processor: "A13 Bionic chip",
+        camera: "Dual 12MP (Wide, Ultra Wide)",
+        battery: "Up to 17 hours video playback",
+        image: "phone_image/iphone11.png"
+      },
+      "iPhone SE 2": {
+        display: "4.7-inch Retina HD",
+        processor: "A13 Bionic chip",
+        camera: "Single 12MP (Wide)",
+        battery: "Up to 13 hours video playback",
+        image: "phone_image/iphonese2.png"
+      },
+      "HUAWEI Nova 12i": {
+        display: "6.7-inch OLED",
+        processor: "Kirin 985",
+        camera: "Triple 64MP (Wide, Ultra Wide, Macro)",
+        battery: "4300 mAh, 40W SuperCharge",
+        image: "phone_image/nova12i.png"
+      },
+      "HUAWEI Nova 10 SE": {
+        display: "6.67-inch OLED",
+        processor: "Snapdragon 680",
+        camera: "Triple 108MP (Wide, Ultra Wide, Depth)",
+        battery: "4500 mAh, 66W SuperCharge",
+        image: "phone_image/nova10se.png"
+      },
+      "HUAWEI Nova 9": {
+        display: "6.57-inch OLED",
+        processor: "Snapdragon 778G",
+        camera: "Quad 50MP (Ultra Vision, Ultra Wide, Depth, Macro)",
+        battery: "4300 mAh, 66W SuperCharge",
+        image: "phone_image/nova9.png"
+      },
+      "HUAWEI P40": {
+        display: "6.1-inch OLED",
+        processor: "Kirin 990 5G",
+        camera: "Triple 50MP Ultra Vision Camera",
+        battery: "3800 mAh, 22.5W SuperCharge",
+        image: "phone_image/p40.png"
+      },
+      "HUAWEI Pura 70": {
+        display: "6.5-inch OLED",
+        processor: "Kirin 9000",
+        camera: "Triple 50MP (Wide, Ultra Wide, Telephoto)",
+        battery: "4500 mAh, 40W SuperCharge",
+        image: "phone_image/pura70.png"
+      },
+      "HUAWEI Pura 70 Pro": {
+        display: "6.6-inch OLED",
+        processor: "Kirin 9000 Pro",
+        camera: "Quad 64MP (Wide, Ultra Wide, Telephoto, Depth)",
+        battery: "4600 mAh, 66W SuperCharge",
+        image: "phone_image/pura70pro.png"
+      },
+      "HUAWEI P60 Pro": {
+        display: "6.7-inch OLED",
+        processor: "Snapdragon 8+ Gen 1",
+        camera: "Triple 48MP Ultra Vision Camera",
+        battery: "4815 mAh, 88W SuperCharge",
+        image: "phone_image/p60pro.png"
+      },
+      "HUAWEI Nova 8": {
+        display: "6.57-inch OLED",
+        processor: "Kirin 985",
+        camera: "Quad 64MP (Wide, Ultra Wide, Depth, Macro)",
+        battery: "3800 mAh, 66W SuperCharge",
+        image: "phone_image/nova8.png"
+      },
+      "Samsung Galaxy Xcover 5": {
+        display: "5.3-inch PLS TFT",
+        processor: "Exynos 850",
+        camera: "Single 16MP",
+        battery: "3000 mAh, 15W charging",
+        image: "phone_image/xcover5.png"
+      },
+      "Samsung Galaxy Xcover6 Pro (5G)": {
+        display: "6.6-inch PLS LCD",
+        processor: "Snapdragon 778G",
+        camera: "Dual 50MP (Wide, Ultra Wide)",
+        battery: "4050 mAh, 15W charging",
+        image: "phone_image/xcover6pro.png"
+      },
+      "Samsung Galaxy S22 Ultra 5G": {
+        display: "6.8-inch Dynamic AMOLED 2X",
+        processor: "Snapdragon 8 Gen 1 / Exynos 2200",
+        camera: "Quad 108MP (Wide, Ultra Wide, Dual Telephoto)",
+        battery: "5000 mAh, 45W charging",
+        image: "phone_image/s22ultra.png"
+      },
+      "Samsung Galaxy S23 (5G)": {
+        display: "6.1-inch Dynamic AMOLED 2X",
+        processor: "Snapdragon 8 Gen 2",
+        camera: "Triple 50MP (Wide, Ultra Wide, Telephoto)",
+        battery: "3900 mAh, 25W charging",
+        image: "phone_image/s23.png"
+      },
+      "Samsung Galaxy S22 5G": {
+        display: "6.1-inch Dynamic AMOLED 2X",
+        processor: "Snapdragon 8 Gen 1",
+        camera: "Triple 50MP (Wide, Ultra Wide, Telephoto)",
+        battery: "3700 mAh, 25W charging",
+        image: "phone_image/s22.png"
+      },
+      "Samsung Galaxy A54 (5G)": {
+        display: "6.4-inch Super AMOLED",
+        processor: "Exynos 1380",
+        camera: "Triple 50MP (Wide, Ultra Wide, Macro)",
+        battery: "5000 mAh, 25W charging",
+        image: "phone_image/a54.png"
+      },
+      "Samsung Galaxy A14 (5G)": {
+        display: "6.6-inch PLS LCD",
+        processor: "Dimensity 700",
+        camera: "Triple 50MP (Wide, Ultra Wide, Depth)",
+        battery: "5000 mAh, 15W charging",
+        image: "phone_image/a14.png"
+      },
+      "Samsung Galaxy S21 (5G)": {
+        display: "6.2-inch Dynamic AMOLED 2X",
+        processor: "Exynos 2100 / Snapdragon 888",
+        camera: "Triple 12MP (Wide, Ultra Wide, Telephoto)",
+        battery: "4000 mAh, 25W charging",
+        image: "phone_image/s21.png"
+      }
+  };
 
-            // Change output based on selected option
-            switch (selectedValue) {
-                case "option1":
-                    outputDiv.textContent = "You selected Option 1!";
-                    outputDiv.style.color = "blue";
-                    break;
-                case "option2":
-                    outputDiv.textContent = "You selected Option 2!";
-                    outputDiv.style.color = "green";
-                    break;
-                case "option3":
-                    outputDiv.textContent = "You selected Option 3!";
-                    outputDiv.style.color = "purple";
-                    break;
-                default:
-                    outputDiv.textContent = "";
-            }
-        }
+
+  function displayOutput() {
+    const selectedValue1 = document.getElementById("optionSelect1").value;
+    const selectedValue2 = document.getElementById("optionSelect2").value;
+    const outputDiv1 = document.getElementById("output1");
+    const outputDiv2 = document.getElementById("output2");
+
+    // Update output content for Model 1
+    if (selectedValue1 && phoneSpecs[selectedValue1]) {
+        const specs1 = phoneSpecs[selectedValue1];
+        outputDiv1.innerHTML = `
+            <img src="${specs1.image}" alt="${selectedValue1}" class="phone-image">
+            <p>Display: ${specs1.display}</p>
+            <p>Processor: ${specs1.processor}</p>
+            <p>Camera: ${specs1.camera}</p>
+            <p>Battery: ${specs1.battery}</p>
+        `;
+    } else {
+        outputDiv1.innerHTML = "";
+    }
+
+    // Update output content for Model 2
+    if (selectedValue2 && phoneSpecs[selectedValue2]) {
+        const specs2 = phoneSpecs[selectedValue2];
+        outputDiv2.innerHTML = `
+            <img src="${specs2.image}" alt="${selectedValue2}" class="phone-image">
+            <p>Display: ${specs2.display}</p>
+            <p>Processor: ${specs2.processor}</p>
+            <p>Camera: ${specs2.camera}</p>
+            <p>Battery: ${specs2.battery}</p>
+        `;
+    } else {
+        outputDiv2.innerHTML = "";
+    }
+}
+
     </script>
 </body>
 </html>
