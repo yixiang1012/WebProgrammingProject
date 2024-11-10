@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Selection Output</title>
+</head>
+<body>
+    <h2>Select an option to see the output:</h2>
+
+    <!-- Select dropdown -->
+    <select id="optionSelect" onchange="displayOutput()">
+        <option value="">--Select an option--</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+
+    <!-- Output area -->
+    <div id="output" style="margin-top: 20px; font-weight: bold;"></div>
+
+    <!-- JavaScript to change output based on selection -->
+    <script>
+        function displayOutput() {
+            const selectedValue = document.getElementById("optionSelect").value;
+            const outputDiv = document.getElementById("output");
+
+            // Change output based on selected option
+            switch (selectedValue) {
+                case "option1":
+                    outputDiv.textContent = "You selected Option 1!";
+                    outputDiv.style.color = "blue";
+                    break;
+                case "option2":
+                    outputDiv.textContent = "You selected Option 2!";
+                    outputDiv.style.color = "green";
+                    break;
+                case "option3":
+                    outputDiv.textContent = "You selected Option 3!";
+                    outputDiv.style.color = "purple";
+                    break;
+                default:
+                    outputDiv.textContent = "";
+            }
+        }
+    </script>
+</body>
+</html>
