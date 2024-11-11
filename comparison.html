@@ -77,6 +77,20 @@
             height: 170px;           
         }
 
+        .spec-container {
+            margin-bottom: 15px;
+        }
+
+        .spec-topic {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .spec-detail {
+         padding-left: 10px;
+         font-size: 14px;
+        }
+
     </style>
 </head>
 <body>
@@ -93,7 +107,8 @@
 
     <div class="select-container">
         <select id="optionSelect1" class="select-box" onchange="displayOutput()">
-            <option value="">--Select Model--</option>
+        <option value="">--Select Model--</option>
+          <optgroup label="iPhone"></optgroup>
             <option value="iPhone 13">iPhone 13</option>
             <option value="iPhone 15">iPhone 15</option>
             <option value="iPhone 15 Pro">iPhone 15 Pro</option>
@@ -102,6 +117,11 @@
             <option value="iPhone 16 Plus">iPhone 16 Plus</option>
             <option value="iPhone 11">iPhone 11</option>
             <option value="iPhone SE 2">iPhone SE 2</option>
+          </optgroup>
+
+          <option disabled> </option>
+
+          <optgroup label="HUAWEI"></optgroup>
             <option value="HUAWEI Nova 12i">HUAWEI Nova 12i</option>
             <option value="HUAWEI Nova 10 SE">HUAWEI Nova 10 SE</option>
             <option value="HUAWEI Nova 9">HUAWEI Nova 9</option>
@@ -110,6 +130,11 @@
             <option value="HUAWEI Pura 70 Pro">HUAWEI Pura 70 Pro</option>
             <option value="HUAWEI P60 Pro">HUAWEI P60 Pro</option>
             <option value="HUAWEI Nova 8">HUAWEI Nova 8</option>
+          </optgroup>
+
+          <option disabled> </option>
+
+          <optgroup label="Samsung"></optgroup>
             <option value="Samsung Galaxy Xcover 5">Samsung Galaxy Xcover 5</option>
             <option value="Samsung Galaxy Xcover6 Pro (5G)">Samsung Galaxy Xcover6 Pro (5G)</option>
             <option value="Samsung Galaxy S22 Ultra 5G">Samsung Galaxy S22 Ultra 5G</option>
@@ -118,10 +143,12 @@
             <option value="Samsung Galaxy A54 (5G)">Samsung Galaxy A54 (5G)</option>
             <option value="Samsung Galaxy A14 (5G)">Samsung Galaxy A14 (5G)</option>
             <option value="Samsung Galaxy S21 (5G)">Samsung Galaxy S21 (5G)</option>
+          </optgroup>
         </select>
 
         <select id="optionSelect2" class="select-box" onchange="displayOutput()">
             <option value="">--Select Model--</option>
+            <optgroup label="iPhone"></optgroup>
             <option value="iPhone 13">iPhone 13</option>
             <option value="iPhone 15">iPhone 15</option>
             <option value="iPhone 15 Pro">iPhone 15 Pro</option>
@@ -130,6 +157,11 @@
             <option value="iPhone 16 Plus">iPhone 16 Plus</option>
             <option value="iPhone 11">iPhone 11</option>
             <option value="iPhone SE 2">iPhone SE 2</option>
+          </optgroup>
+
+          <option disabled> </option>
+
+          <optgroup label="HUAWEI"></optgroup>
             <option value="HUAWEI Nova 12i">HUAWEI Nova 12i</option>
             <option value="HUAWEI Nova 10 SE">HUAWEI Nova 10 SE</option>
             <option value="HUAWEI Nova 9">HUAWEI Nova 9</option>
@@ -138,6 +170,11 @@
             <option value="HUAWEI Pura 70 Pro">HUAWEI Pura 70 Pro</option>
             <option value="HUAWEI P60 Pro">HUAWEI P60 Pro</option>
             <option value="HUAWEI Nova 8">HUAWEI Nova 8</option>
+          </optgroup>
+
+          <option disabled> </option>
+
+          <optgroup label="Samsung"></optgroup>
             <option value="Samsung Galaxy Xcover 5">Samsung Galaxy Xcover 5</option>
             <option value="Samsung Galaxy Xcover6 Pro (5G)">Samsung Galaxy Xcover6 Pro (5G)</option>
             <option value="Samsung Galaxy S22 Ultra 5G">Samsung Galaxy S22 Ultra 5G</option>
@@ -146,186 +183,332 @@
             <option value="Samsung Galaxy A54 (5G)">Samsung Galaxy A54 (5G)</option>
             <option value="Samsung Galaxy A14 (5G)">Samsung Galaxy A14 (5G)</option>
             <option value="Samsung Galaxy S21 (5G)">Samsung Galaxy S21 (5G)</option>
+          </optgroup>
         </select>
     </div>
 
-    <!-- Output area with two containers -->
+    <!-- Output area -->
     <div id="output">
         <div id="output1" class="output-box"></div>
         <div id="output2" class="output-box"></div>
     </div>
 
     <script>
-    const phoneSpecs = {
-      "iPhone 13": {
-        display: "6.1-inch Super Retina XDR",
-        processor: "A15 Bionic chip",
-        camera: "Dual 12MP (Wide, Ultra Wide)",
-        battery: "Up to 19 hours video playback",
-        image: "phone_image/iphone13.png"
-      },
-      "iPhone 15": {
-        display: "6.1-inch Super Retina XDR",
-        processor: "A16 Bionic chip",
-        camera: "Dual 48MP (Wide, Ultra Wide)",
-        battery: "Up to 20 hours video playback",
-        image: "phone_image/iphone15.png"
-      },
-      "iPhone 15 Pro": {
-        display: "6.1-inch Super Retina XDR",
-        processor: "A17 Pro chip",
-        camera: "Triple 48MP (Wide, Ultra Wide, Telephoto)",
-        battery: "Up to 23 hours video playback",
-        image: "phone_image/iphone15pro.png"
-      },
-      "iPhone 15 Plus": {
-        display: "6.7-inch Super Retina XDR",
-        processor: "A16 Bionic chip",
-        camera: "Dual 48MP (Wide, Ultra Wide)",
-        battery: "Up to 26 hours video playback",
-        image: "phone_image/iphone15plus.png"
-      },
-      "iPhone 16": {
-        display: "6.1-inch Super Retina XDR",
-        processor: "A18 chip",
-        camera: "Dual 50MP (Wide, Ultra Wide)",
-        battery: "Up to 22 hours video playback",
-        image: "phone_image/iphone16.png"
-      },
-      "iPhone 16 Plus": {
-        display: "6.7-inch Super Retina XDR",
-        processor: "A18 chip",
-        camera: "Dual 50MP (Wide, Ultra Wide)",
-        battery: "Up to 29 hours video playback",
-        image: "phone_image/iphone16plus.png"
-      },
-      "iPhone 11": {
-        display: "6.1-inch Liquid Retina HD",
-        processor: "A13 Bionic chip",
-        camera: "Dual 12MP (Wide, Ultra Wide)",
-        battery: "Up to 17 hours video playback",
-        image: "phone_image/iphone11.png"
-      },
-      "iPhone SE 2": {
-        display: "4.7-inch Retina HD",
-        processor: "A13 Bionic chip",
-        camera: "Single 12MP (Wide)",
-        battery: "Up to 13 hours video playback",
-        image: "phone_image/iphonese2.png"
-      },
-      "HUAWEI Nova 12i": {
-        display: "6.7-inch OLED",
-        processor: "Kirin 985",
-        camera: "Triple 64MP (Wide, Ultra Wide, Macro)",
-        battery: "4300 mAh, 40W SuperCharge",
-        image: "phone_image/nova12i.png"
-      },
-      "HUAWEI Nova 10 SE": {
-        display: "6.67-inch OLED",
-        processor: "Snapdragon 680",
-        camera: "Triple 108MP (Wide, Ultra Wide, Depth)",
-        battery: "4500 mAh, 66W SuperCharge",
-        image: "phone_image/nova10se.png"
-      },
-      "HUAWEI Nova 9": {
-        display: "6.57-inch OLED",
-        processor: "Snapdragon 778G",
-        camera: "Quad 50MP (Ultra Vision, Ultra Wide, Depth, Macro)",
-        battery: "4300 mAh, 66W SuperCharge",
-        image: "phone_image/nova9.png"
-      },
-      "HUAWEI P40": {
-        display: "6.1-inch OLED",
-        processor: "Kirin 990 5G",
-        camera: "Triple 50MP Ultra Vision Camera",
-        battery: "3800 mAh, 22.5W SuperCharge",
-        image: "phone_image/p40.png"
-      },
-      "HUAWEI Pura 70": {
-        display: "6.5-inch OLED",
-        processor: "Kirin 9000",
-        camera: "Triple 50MP (Wide, Ultra Wide, Telephoto)",
-        battery: "4500 mAh, 40W SuperCharge",
-        image: "phone_image/pura70.png"
-      },
-      "HUAWEI Pura 70 Pro": {
-        display: "6.6-inch OLED",
-        processor: "Kirin 9000 Pro",
-        camera: "Quad 64MP (Wide, Ultra Wide, Telephoto, Depth)",
-        battery: "4600 mAh, 66W SuperCharge",
-        image: "phone_image/pura70pro.png"
-      },
-      "HUAWEI P60 Pro": {
-        display: "6.7-inch OLED",
-        processor: "Snapdragon 8+ Gen 1",
-        camera: "Triple 48MP Ultra Vision Camera",
-        battery: "4815 mAh, 88W SuperCharge",
-        image: "phone_image/p60pro.png"
-      },
-      "HUAWEI Nova 8": {
-        display: "6.57-inch OLED",
-        processor: "Kirin 985",
-        camera: "Quad 64MP (Wide, Ultra Wide, Depth, Macro)",
-        battery: "3800 mAh, 66W SuperCharge",
-        image: "phone_image/nova8.png"
-      },
-      "Samsung Galaxy Xcover 5": {
-        display: "5.3-inch PLS TFT",
-        processor: "Exynos 850",
-        camera: "Single 16MP",
-        battery: "3000 mAh, 15W charging",
-        image: "phone_image/xcover5.png"
-      },
-      "Samsung Galaxy Xcover6 Pro (5G)": {
-        display: "6.6-inch PLS LCD",
-        processor: "Snapdragon 778G",
-        camera: "Dual 50MP (Wide, Ultra Wide)",
-        battery: "4050 mAh, 15W charging",
-        image: "phone_image/xcover6pro.png"
-      },
-      "Samsung Galaxy S22 Ultra 5G": {
-        display: "6.8-inch Dynamic AMOLED 2X",
-        processor: "Snapdragon 8 Gen 1 / Exynos 2200",
-        camera: "Quad 108MP (Wide, Ultra Wide, Dual Telephoto)",
-        battery: "5000 mAh, 45W charging",
-        image: "phone_image/s22ultra.png"
-      },
-      "Samsung Galaxy S23 (5G)": {
-        display: "6.1-inch Dynamic AMOLED 2X",
-        processor: "Snapdragon 8 Gen 2",
-        camera: "Triple 50MP (Wide, Ultra Wide, Telephoto)",
-        battery: "3900 mAh, 25W charging",
-        image: "phone_image/s23.png"
-      },
-      "Samsung Galaxy S22 5G": {
-        display: "6.1-inch Dynamic AMOLED 2X",
-        processor: "Snapdragon 8 Gen 1",
-        camera: "Triple 50MP (Wide, Ultra Wide, Telephoto)",
-        battery: "3700 mAh, 25W charging",
-        image: "phone_image/s22.png"
-      },
-      "Samsung Galaxy A54 (5G)": {
-        display: "6.4-inch Super AMOLED",
-        processor: "Exynos 1380",
-        camera: "Triple 50MP (Wide, Ultra Wide, Macro)",
-        battery: "5000 mAh, 25W charging",
-        image: "phone_image/a54.png"
-      },
-      "Samsung Galaxy A14 (5G)": {
-        display: "6.6-inch PLS LCD",
-        processor: "Dimensity 700",
-        camera: "Triple 50MP (Wide, Ultra Wide, Depth)",
-        battery: "5000 mAh, 15W charging",
-        image: "phone_image/a14.png"
-      },
-      "Samsung Galaxy S21 (5G)": {
-        display: "6.2-inch Dynamic AMOLED 2X",
-        processor: "Exynos 2100 / Snapdragon 888",
-        camera: "Triple 12MP (Wide, Ultra Wide, Telephoto)",
-        battery: "4000 mAh, 25W charging",
-        image: "phone_image/s21.png"
-      }
-  };
+const phoneSpecs = {
+"iPhone 13": {
+    display: "6.1-inch Super Retina XDR OLED (2532 x 1170 resolution)",
+    processor: "A15 Bionic chip with 6-core CPU, 4-core GPU, and 16-core Neural Engine Powerful",
+    camera: "Dual 12MP (Wide, Ultra Wide), Night mode, Deep Fusion, 4K Dolby Vision HDR recording",
+    battery: "3240 mAh, Up to 19 hours video playback, MagSafe and Qi wireless charging",
+    memory: "4GB RAM, 128GB/256GB/512GB storage options",
+    os: "iOS 15",
+    audio: "Stereo speakers, spatial audio support",
+    connectivity: "5G, Wi-Fi 6, Bluetooth 5.0, Ultra-Wideband (UWB)",
+    sensors: "Face ID, accelerometer, gyro, proximity, compass, barometer",
+    otherFeatures: "Ceramic Shield, IP68 water resistance, dual SIM (nano-SIM and eSIM)",
+    image: "phone_image/iphone13.png"
+  },
+  "iPhone 15": {
+    display: "6.1-inch Super Retina XDR, OLED, 2556 x 1179 resolution, HDR10, True Tone, Dynamic Island",
+    processor: "A16 Bionic chip, 6-core CPU, 5-core GPU",
+    camera: "Dual 48MP (Wide, Ultra Wide), Photonic Engine, sensor-shift stabilization",
+    battery: "3300 mAh, Up to 20 hours video playback, MagSafe and Qi wireless charging",
+    memory: "6GB RAM, 128GB/256GB/512GB storage options",
+    os: "iOS 17",
+    audio: "Stereo speakers, Dolby Atmos",
+    connectivity: "5G, Wi-Fi 6E, Bluetooth 5.3, Ultra-Wideband (UWB)",
+    sensors: "Face ID, accelerometer, gyro, proximity, compass, barometer",
+    otherFeatures: "Dynamic Island, IP68 water resistance, dual SIM (nano-SIM and eSIM)",
+    image: "phone_image/iphone15.png"
+  },
+  "iPhone 15 Pro": {
+    display: "6.1-inch Super Retina XDR, OLED, 2556 x 1179 resolution, HDR10, True Tone, ProMotion 120Hz",
+    processor: "A17 Pro chip, 6-core CPU, 6-core GPU",
+    camera: "Triple 48MP (Wide, Ultra Wide, Telephoto), 5x optical zoom, Night mode, LiDAR Scanner",
+    battery: "3650 mAh, Up to 23 hours video playback, MagSafe and Qi wireless charging",
+    memory: "8GB RAM, 128GB/256GB/512GB/1TB storage options",
+    os: "iOS 17",
+    audio: "Stereo speakers, spatial audio, Dolby Atmos",
+    connectivity: "5G, Wi-Fi 6E, Bluetooth 5.3, Ultra-Wideband (UWB)",
+    sensors: "Face ID, accelerometer, gyro, proximity, compass, barometer",
+    otherFeatures: "Titanium frame, IP68 water resistance, dual SIM (nano-SIM and eSIM)",
+    image: "phone_image/iphone15pro.png"
+  },
+  "iPhone 15 Plus": {
+    display: "6.7-inch Super Retina XDR",
+    processor: "A16 Bionic chip",
+    camera: "Dual 48MP (Wide, Ultra Wide)",
+    battery: "Up to 26 hours video playback",
+    memory: "6GB RAM, 128GB/256GB/512GB storage options",
+    os: "iOS 17",
+    audio: "Stereo speakers, Dolby Atmos",
+    connectivity: "5G, Wi-Fi 6E, Bluetooth 5.3, Ultra-Wideband (UWB)",
+    sensors: "Face ID, accelerometer, gyro, proximity, compass, barometer",
+    otherFeatures: "IP68 water resistance, dual SIM (nano-SIM and eSIM)",
+    image: "phone_image/iphone15plus.png"
+  },
+  "iPhone 16": {
+    display: "6.1-inch Super Retina XDR",
+    processor: "A18 chip",
+    camera: "Dual 50MP (Wide, Ultra Wide)",
+    battery: "Up to 22 hours video playback",
+    memory: "8GB RAM, 128GB/256GB/512GB storage options",
+    os: "iOS 17",
+    audio: "Stereo speakers, Dolby Atmos",
+    connectivity: "5G, Wi-Fi 6E, Bluetooth 5.3, Ultra-Wideband (UWB)",
+    sensors: "Face ID, accelerometer, gyro, proximity, compass, barometer",
+    otherFeatures: "IP68 water resistance, dual SIM (nano-SIM and eSIM)",
+    image: "phone_image/iphone16.png"
+  },
+  "iPhone 16 Plus": {
+    display: "6.7-inch Super Retina XDR",
+    processor: "A18 chip",
+    camera: "Dual 50MP (Wide, Ultra Wide)",
+    battery: "Up to 29 hours video playback",
+    memory: "8GB RAM, 128GB/256GB/512GB storage options",
+    os: "iOS 17",
+    audio: "Stereo speakers, Dolby Atmos",
+    connectivity: "5G, Wi-Fi 6E, Bluetooth 5.3, Ultra-Wideband (UWB)",
+    sensors: "Face ID, accelerometer, gyro, proximity, compass, barometer",
+    otherFeatures: "IP68 water resistance, dual SIM (nano-SIM and eSIM)",
+    image: "phone_image/iphone16plus.png"
+  },
+  "iPhone 11": {
+    display: "6.1-inch Liquid Retina HD",
+    processor: "A13 Bionic chip",
+    camera: "Dual 12MP (Wide, Ultra Wide)",
+    battery: "Up to 17 hours video playback",
+    memory: "4GB RAM, 64GB/128GB/256GB storage options",
+    os: "iOS 13",
+    audio: "Stereo speakers",
+    connectivity: "4G LTE, Wi-Fi 6, Bluetooth 5.0",
+    sensors: "Face ID, accelerometer, gyro, proximity, compass, barometer",
+    otherFeatures: "IP68 water resistance, dual SIM (nano-SIM and eSIM)",
+    image: "phone_image/iphone11.png"
+  },
+  "iPhone SE 2": {
+    display: "4.7-inch Retina HD",
+    processor: "A13 Bionic chip",
+    camera: "Single 12MP (Wide)",
+    battery: "Up to 13 hours video playback",
+    memory: "3GB RAM, 64GB/128GB/256GB storage options",
+    os: "iOS 13",
+    audio: "Stereo speakers",
+    connectivity: "4G LTE, Wi-Fi 6, Bluetooth 5.0",
+    sensors: "Touch ID, accelerometer, gyro, proximity, compass, barometer",
+    otherFeatures: "IP67 water resistance, single SIM (nano-SIM)",
+    image: "phone_image/iphonese2.png"
+  },
+  "HUAWEI Nova 12i": {
+    display: "6.7-inch OLED",
+    processor: "Kirin 985",
+    camera: "Triple 64MP (Wide, Ultra Wide, Macro)",
+    battery: "4300 mAh, 40W SuperCharge",
+    memory: "6GB RAM, 128GB/256GB storage options",
+    os: "EMUI 12",
+    audio: "Stereo speakers",
+    connectivity: "5G, Wi-Fi 6, Bluetooth 5.0",
+    sensors: "Fingerprint sensor, accelerometer, gyro, proximity, compass",
+    otherFeatures: "IP68 water resistance, dual SIM (nano-SIM and eSIM)",
+    image: "phone_image/nova12i.png"
+  },
+  "HUAWEI Nova 10 SE": {
+    display: "6.67-inch OLED",
+    processor: "Snapdragon 680",
+    camera: "Triple 108MP (Wide, Ultra Wide, Depth)",
+    battery: "4500 mAh, 66W SuperCharge",
+    memory: "8GB RAM, 128GB/256GB storage options",
+    os: "EMUI 12 (no Google services)",
+    audio: "Stereo speakers",
+    connectivity: "5G, Wi-Fi 5, Bluetooth 5.1",
+    sensors: "Fingerprint sensor, accelerometer, gyro",
+    otherFeatures: "Fast charging support, sleek design",
+    image: "phone_image/nova10se.png"
+  },
+  "HUAWEI Nova 9": {
+    display: "6.57-inch OLED",
+    processor: "Snapdragon 778G",
+    camera: "Quad 50MP (Ultra Vision, Ultra Wide, Depth, Macro)",
+    battery: "4300 mAh, 66W SuperCharge",
+    memory: "8GB RAM, 128GB/256GB storage options",
+    os: "EMUI 12 (no Google services)",
+    audio: "Stereo speakers",
+    connectivity: "5G, Wi-Fi 6, Bluetooth 5.2",
+    sensors: "Fingerprint sensor, accelerometer, gyro",
+    otherFeatures: "Fast charging support, sleek design",
+    image: "phone_image/nova9.png"
+  },
+  "HUAWEI P40": {
+    display: "6.1-inch OLED",
+    processor: "Kirin 990 5G",
+    camera: "Triple 50MP Ultra Vision Camera",
+    battery: "3800 mAh, 22.5W SuperCharge",
+    memory: "8GB RAM, 128GB storage",
+    os: "EMUI 10.1 (no Google services)",
+    audio: "Stereo speakers",
+    connectivity: "5G, Wi-Fi 6, Bluetooth 5.1",
+    sensors: "Fingerprint sensor, accelerometer, gyro",
+    otherFeatures: "IP68 rating, fast charging",
+    image: "phone_image/p40.png"
+  },
+  "HUAWEI Pura 70": {
+    display: "6.5-inch OLED",
+    processor: "Kirin 9000",
+    camera: "Triple 50MP (Wide, Ultra Wide, Telephoto)",
+    battery: "4500 mAh, 40W SuperCharge",
+    memory: "8GB RAM, 128GB storage",
+    os: "EMUI 11 (no Google services)",
+    audio: "Stereo speakers",
+    connectivity: "5G, Wi-Fi 6, Bluetooth 5.2",
+    sensors: "Fingerprint sensor, accelerometer, gyro",
+    otherFeatures: "Fast charging, premium design",
+    image: "phone_image/pura70.png"
+  },
+  "HUAWEI Pura 70 Pro": {
+    display: "6.6-inch OLED",
+    processor: "Kirin 9000 Pro",
+    camera: "Quad 64MP (Wide, Ultra Wide, Telephoto, Depth)",
+    battery: "4600 mAh, 66W SuperCharge",
+    memory: "8GB RAM, 256GB storage",
+    os: "EMUI 11 (no Google services)",
+    audio: "Stereo speakers",
+    connectivity: "5G, Wi-Fi 6, Bluetooth 5.2",
+    sensors: "Fingerprint sensor, accelerometer, gyro",
+    otherFeatures: "Fast charging, IP68 rating",
+    image: "phone_image/pura70pro.png"
+  },
+  "HUAWEI P60 Pro": {
+    display: "6.7-inch OLED",
+    processor: "Snapdragon 8+ Gen 1",
+    camera: "Triple 48MP Ultra Vision Camera",
+    battery: "4815 mAh, 88W SuperCharge",
+    memory: "8GB/12GB RAM, 256GB/512GB storage options",
+    os: "HarmonyOS 3.0",
+    audio: "Stereo speakers",
+    connectivity: "5G, Wi-Fi 6E, Bluetooth 5.3",
+    sensors: "Fingerprint sensor, accelerometer, gyro",
+    otherFeatures: "Fast charging, IP68 water resistance",
+    image: "phone_image/p60pro.png"
+  },
+  "HUAWEI Nova 8": {
+    display: "6.57-inch OLED",
+    processor: "Kirin 985",
+    camera: "Quad 64MP (Wide, Ultra Wide, Depth, Macro)",
+    battery: "3800 mAh, 66W SuperCharge",
+    memory: "8GB RAM, 128GB storage",
+    os: "EMUI 10.1 (no Google services)",
+    audio: "Stereo speakers",
+    connectivity: "5G, Wi-Fi 6, Bluetooth 5.1",
+    sensors: "Fingerprint sensor, accelerometer, gyro",
+    otherFeatures: "Fast charging, sleek design",
+    image: "phone_image/nova8.png"
+  },
+  "Samsung Galaxy Xcover 5": {
+    display: "5.3-inch PLS TFT",
+    processor: "Exynos 850",
+    camera: "Single 16MP",
+    battery: "3000 mAh, 15W charging",
+    memory: "3GB RAM, 32GB storage",
+    os: "Android 10",
+    audio: "Mono speaker",
+    connectivity: "4G, Wi-Fi 5, Bluetooth 5.0",
+    sensors: "Fingerprint sensor, accelerometer",
+    otherFeatures: "IP68 rating, MIL-STD-810G certified",
+    image: "phone_image/xcover5.png"
+  },
+  "Samsung Galaxy Xcover 6 Pro (5G)": {
+    display: "6.6-inch PLS LCD",
+    processor: "Snapdragon 778G",
+    camera: "Dual 50MP (Wide, Ultra Wide)",
+    battery: "4050 mAh, 15W charging",
+    memory: "6GB RAM, 128GB storage",
+    os: "Android 12",
+    audio: "Stereo speakers",
+    connectivity: "5G, Wi-Fi 6, Bluetooth 5.2",
+    sensors: "Fingerprint sensor, accelerometer",
+    otherFeatures: "IP68 rating, MIL-STD-810G certified",
+    image: "phone_image/xcover6pro.png"
+  },
+  "Samsung Galaxy S22 Ultra 5G": {
+    display: "6.8-inch Dynamic AMOLED 2X",
+    processor: "Snapdragon 8 Gen 1 / Exynos 2200",
+    camera: "Quad 108MP (Wide, Ultra Wide, Dual Telephoto)",
+    battery: "5000 mAh, 45W charging",
+    memory: "12GB RAM, 128GB/256GB/512GB storage options",
+    os: "Android 12",
+    audio: "Stereo speakers, Dolby Atmos",
+    connectivity: "5G, Wi-Fi 6E, Bluetooth 5.2",
+    sensors: "Fingerprint sensor, accelerometer",
+    otherFeatures: "S Pen support, IP68 rating",
+    image: "phone_image/s22ultra.png"
+  },
+  "Samsung Galaxy S23 (5G)": {
+    display: "6.1-inch Dynamic AMOLED 2X",
+    processor: "Snapdragon 8 Gen 2",
+    camera: "Triple 50MP (Wide, Ultra Wide, Telephoto)",
+    battery: "3900 mAh, 25W charging",
+    memory: "8GB RAM, 128GB/256GB storage options",
+    os: "Android 13",
+    audio: "Stereo speakers, Dolby Atmos",
+    connectivity: "5G, Wi-Fi 6E, Bluetooth 5.3",
+    sensors: "Fingerprint sensor, accelerometer",
+    otherFeatures: "IP68 rating, fast charging",
+    image: "phone_image/s23.png"
+  },
+  "Samsung Galaxy S22 5G": {
+    display: "6.1-inch Dynamic AMOLED 2X",
+    processor: "Snapdragon 8 Gen 1",
+    camera: "Triple 50MP (Wide, Ultra Wide, Telephoto)",
+    battery: "3700 mAh, 25W charging",
+    memory: "8GB RAM, 128GB/256GB storage options",
+    os: "Android 12",
+    audio: "Stereo speakers, Dolby Atmos",
+    connectivity: "5G, Wi-Fi 6, Bluetooth 5.2",
+    sensors: "Fingerprint sensor, accelerometer",
+    otherFeatures: "IP68 rating, fast charging",
+    image: "phone_image/s22.png"
+  },
+  "Samsung Galaxy A54 (5G)": {
+    display: "6.4-inch Super AMOLED",
+    processor: "Exynos 1380",
+    camera: "Triple 50MP (Wide, Ultra Wide, Macro)",
+    battery: "5000 mAh, 25W charging",
+    memory: "6GB/8GB RAM, 128GB/256GB storage options",
+    os: "Android 13",
+    audio: "Stereo speakers, Dolby Atmos",
+    connectivity: "5G, Wi-Fi 6, Bluetooth 5.2",
+    sensors: "Fingerprint sensor, accelerometer",
+    otherFeatures: "IP67 rating, fast charging",
+    image: "phone_image/a54.png"
+  },
+  "Samsung Galaxy A14 (5G)": {
+    display: "6.6-inch PLS LCD",
+    processor: "Exynos 1330",
+    camera: "Triple 50MP (Wide, Ultra Wide, Depth)",
+    battery: "5000 mAh, 15W charging",
+    memory: "4GB/6GB RAM, 64GB/128GB storage options",
+    os: "Android 13",
+    audio: "Stereo speakers",
+    connectivity: "5G, Wi-Fi 5, Bluetooth 5.2",
+    sensors: "Fingerprint sensor, accelerometer",
+    otherFeatures: "Fast charging, budget-friendly",
+    image: "phone_image/a14.png"
+  },
+  "Samsung Galaxy S21 (5G)": {
+    display: "6.2-inch Dynamic AMOLED 2X",
+    processor: "Exynos 2100 / Snapdragon 888",
+    camera: "Triple 12MP (Wide, Ultra Wide, Telephoto)",
+    battery: "4000 mAh, 25W charging",
+    memory: "8GB RAM, 128GB/256GB storage options",
+    os: "Android 11",
+    audio: "Stereo speakers, Dolby Atmos",
+    connectivity: "5G, Wi-Fi 6, Bluetooth 5.0",
+    sensors: "Fingerprint sensor, accelerometer",
+    otherFeatures: "IP68 rating, fast charging",
+    image: "phone_image/s21.png"
+  }
+};
+
 
 
   function displayOutput() {
@@ -334,30 +517,105 @@
     const outputDiv1 = document.getElementById("output1");
     const outputDiv2 = document.getElementById("output2");
 
-    // Update output content for Model 1
+    // Output content for Model 1 //
     if (selectedValue1 && phoneSpecs[selectedValue1]) {
         const specs1 = phoneSpecs[selectedValue1];
         outputDiv1.innerHTML = `
-            <img src="${specs1.image}" alt="${selectedValue1}" class="phone-image">
-            <p>Display: ${specs1.display}</p>
-            <p>Processor: ${specs1.processor}</p>
-            <p>Camera: ${specs1.camera}</p>
-            <p>Battery: ${specs1.battery}</p>
-        `;
+    <img src="${specs1.image}" alt="${selectedValue1}" class="phone-image">
+    <div class="spec-container">
+        <div class="spec-topic">Display</div>
+        <div class="spec-detail">${specs1.display}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Processor</div>
+        <div class="spec-detail">${specs1.processor}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Camera</div>
+        <div class="spec-detail">${specs1.camera}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Battery</div>
+        <div class="spec-detail">${specs1.battery}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Memory</div>
+        <div class="spec-detail">${specs1.memory}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Operating System</div>
+        <div class="spec-detail">${specs1.os}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Audio</div>
+        <div class="spec-detail">${specs1.audio}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Connectivity</div>
+        <div class="spec-detail">${specs1.connectivity}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Sensors</div>
+        <div class="spec-detail">${specs1.sensors}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Other Features</div>
+        <div class="spec-detail">${specs1.otherFeatures}</div>
+    </div>
+`;
+
     } else {
         outputDiv1.innerHTML = "";
     }
 
-    // Update output content for Model 2
+    // Output content for Model 2 //
     if (selectedValue2 && phoneSpecs[selectedValue2]) {
         const specs2 = phoneSpecs[selectedValue2];
         outputDiv2.innerHTML = `
-            <img src="${specs2.image}" alt="${selectedValue2}" class="phone-image">
-            <p>Display: ${specs2.display}</p>
-            <p>Processor: ${specs2.processor}</p>
-            <p>Camera: ${specs2.camera}</p>
-            <p>Battery: ${specs2.battery}</p>
-        `;
+    <img src="${specs2.image}" alt="${selectedValue2}" class="phone-image">
+    <div class="spec-container">
+        <div class="spec-topic">Display</div>
+        <div class="spec-detail">${specs2.display}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Processor</div>
+        <div class="spec-detail">${specs2.processor}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Camera</div>
+        <div class="spec-detail">${specs2.camera}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Battery</div>
+        <div class="spec-detail">${specs2.battery}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Memory</div>
+        <div class="spec-detail">${specs2.memory}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Operating System</div>
+        <div class="spec-detail">${specs2.os}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Audio</div>
+        <div class="spec-detail">${specs2.audio}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Connectivity</div>
+        <div class="spec-detail">${specs2.connectivity}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Sensors</div>
+        <div class="spec-detail">${specs2.sensors}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Other Features</div>
+        <div class="spec-detail">${specs2.otherFeatures}</div>
+    </div>
+`;
+
+
     } else {
         outputDiv2.innerHTML = "";
     }
