@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+
+    <style>
+        /* Inline CSS for Register */
+        body {
+            padding-top: 100px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
+        .form-container {
+            border: 2px solid #00415d;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+        }
+
+        .panel-heading h2 {
+            color: #00415d;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            height: 50px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            padding: 12px;
+            margin-bottom: 15px;
+            width: 100%;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-register {
+            width: 100%;
+            padding: 14px;
+            font-size: 16px;
+            text-transform: uppercase;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #fff;
+            border: none;
+            background-color: #1CB94E;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-register:hover {
+            background-color: #1A9C3C;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="panel panel-register">
+                <div class="panel-heading">
+                    <h2>Register</h2>
+                    <hr>
+                </div>
+                <div class="panel-body">
+                    <!-- Register Form -->
+                    <form id="register-form" action="#" method="post" role="form">
+                        <div class="form-group">
+                            <input type="text" name="username" id="register-username" class="form-control" placeholder="Username" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="register-email" class="form-control" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" id="register-password" class="form-control" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="confirm-password" id="register-confirm-password" class="form-control" placeholder="Confirm Password" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="register-submit" id="register-submit" class="form-control btn btn-register" value="Register Now">
+                        </div>
+                        <div class="form-group text-center">
+                            <p>Already have an account? <a href="Login and Signup Forms.html">Login here</a></p>
+							 
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <script>
+    // Inline JavaScript for Register
+    document.getElementById('register-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        let password = document.getElementById('register-password').value;
+        let confirmPassword = document.getElementById('register-confirm-password').value;
+        if (password !== confirmPassword) {
+            alert("Passwords do not match.");
+        } else {
+            alert("Registration successful! Redirecting to login...");
+            window.location.href = "Login and Signup Forms.html";  // Redirects to the login page
+        }
+    });
+</script>
+
+</body>
+
+</html>
