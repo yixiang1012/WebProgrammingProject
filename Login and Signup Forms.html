@@ -14,6 +14,15 @@
             background-color: #f3f4f6;
             color: #333;
         }
+		body {
+		padding-top: 100px;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		background-image: url('https://image.16pic.com/00/12/30/16pic_1230541_s.jpg'); /* Replace with your image path */
+		background-size: cover; /* This will make sure the background covers the entire page */
+		background-position: center center; /* This centers the image */
+		color: #333;
+		}
+
 
         .container {
             width: 100%;
@@ -131,6 +140,7 @@
                 alert("Please fill out all fields.");
             } else {
                 alert("Login successful!");
+				window.location.href = "index.html";
             }
         });
     </script>
