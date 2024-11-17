@@ -125,11 +125,113 @@
              font-weight: bold;
          }
          .container {
-  position: relative;
-  text-align: center;
-  color: white;
-  font-weight: bold
-}
+             position: relative;
+             text-align: center;
+             color: white;
+             font-weight: bold
+         }
+         
+/** footer **/
+
+.footer {
+     background-color: #180552;
+     padding: 60px 0;
+     text-align: left;
+     margin-top: 80px;
+ }
+ 
+ .support-topic {
+     font-size: 20px;
+ }
+
+ .footer h3 {
+     color: #fff;
+     font-weight: 400;
+     font-size: 24px;
+     text-transform: uppercase;
+     margin-bottom: 20px;
+ }
+ 
+ .footer ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+ }
+ 
+ .footer .social_icon {
+     display: flex;
+     gap: 20px;
+     padding-top: 20px;
+     margin-left: 170px;
+ }
+
+ .footer .link_icon li,
+ .footer .location_icon li,
+ .footer .social_icon li {
+     margin-bottom: 10px;
+     display: flex;
+     align-items: center;
+ }
+
+ .footer .social_icon li {
+     float: none;
+ }
+ 
+ .footer .link_icon li a,
+ .footer .location_icon li a,
+ .footer .social_icon li a {
+     color: #fff;
+     font-size: 16px;
+     text-decoration: none;
+     display: inline-flex;
+     align-items: center;
+ }
+ 
+ .footer .link_icon li a i,
+ .footer .location_icon li a i {
+     margin-right: 10px;
+     font-size: 18px;
+ }
+ 
+ .footer .social_icon li a {
+     width: 40px;
+     height: 40px;
+     background: #fff;
+     color: #180552;
+     border-radius: 50%;
+     font-size: 18px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transition: background 0.3s, color 0.3s;
+ }
+ 
+ .footer .social_icon li a:hover {
+     background: #fbca47;
+     color: #000;
+ }
+ 
+ .footer .location_icon li a:hover,
+ .footer .link_icon li a:hover {
+     color: #fbca47;
+ }
+ 
+ .footer .follow p {
+     color: #fff;
+     font-size: 15px;
+     margin-bottom: 10px;
+ }
+ 
+ .copyright {
+     padding: 20px 0;
+     text-align: center;
+     color: #fff;
+     font-size: 16px;
+     border-top: 1px solid #301e64;
+ }
+
+
+/** end footer **/
  
         
      </style>
@@ -363,61 +465,67 @@
       
       <!-- end contact  section -->
       <!--  footer -->
-      <footer >
-         <div class="footer">
+      <footer>
+        <div class="footer">
             <div class="container">
-               <div class="row">
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                     <a class="logo2" href="index.html"><img src="images/loogo2.png" alt="#"/></a>
-                     <div class="follow">
-                        <p>reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal di</p>
-                     </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                     <h3>Quick link</h3>
-                     <ul class="link_icon">
-                        <li class="active"> <a href="index.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Home</a></li>
-                        <li><a href="about.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> About</a></li>
-                        <li><a href="currency.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Currency</a></li>
-                        <li><a href="exchange.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Exchange</a></li>
-                        <li><a href="subscribe.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Subscribe</a></li>
-                     </ul>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                     <h3>Instagram </h3>
-                     <div class="follow">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </p>
-                        <ul class="social_icon">
-                           <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                           <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                           <li> <a href="#">   <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                           <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <h3>Quick Link</h3>
+                        <ul class="link_icon">
+                            <li><a href="index.html"><i class="fa fa-chevron-right"></i>Home</a></li>
+                            <li><a href="about.html"><i class="fa fa-chevron-right"></i>About</a></li>
+                            <li><a href="news.html"><i class="fa fa-chevron-right"></i>News</a></li>
+                            <li><a href="products.html"><i class="fa fa-chevron-right"></i>Products</a></li>
+                            <li><a href="phone.html"><i class="fa fa-chevron-right"></i>Phones</a></li>
+                            <li><a href="tablet.html"><i class="fa fa-chevron-right"></i>Tablets</a></li>
+                            <li><a href="support.html"><i class="fa fa-chevron-right"></i>Support Center</a></li>
                         </ul>
-                     </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                     <h3>Contact us</h3>
-                     <ul class="location_icon">
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a>Reader will be dis<br>
-                           tracted by the reada
-                        </li>
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>demo@gmail.com</li>
-                        <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a>+01 102586954775</li>
-                     </ul>
-                  </div>
-               </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="support-topic">After Sales Support</div><br>
+                        <ul class="link_icon">
+                            <li><a href="faq.html"><i class="fa fa-chevron-right"></i>Frequently Asked Questions</a></li>
+                            <li><a href="mailto:MobileVerse@gmail.com"><i class="fa fa-chevron-right"></i>Email Support</a></li>
+                            <li><a href="tel:011-8520-7118"><i class="fa fa-chevron-right"></i>Phone Support</a></li>
+                            <li><a href="cargo_status.html"><i class="fa fa-chevron-right"></i>Check Cargo Status</a></li>
+                        </ul>
+                    </div>                   
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="support-topic">Repair Support</div><br>
+                        <ul class="link_icon">
+                            <li><a href="make_appointment.html"><i class="fa fa-chevron-right"></i>Make an Appointment</a></li>
+                            <li><a href="repair_status.html"><i class="fa fa-chevron-right"></i>Check Repair Status</a></li>
+                            <li><a href="warranty.html"><i class="fa fa-chevron-right"></i>Buy Extended Warranty</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <h3>Contact Us</h3>
+                        <ul class="location_icon">
+                            <li><a href="#"><i class="fa fa-map-marker"></i></a>No. 12, Jalan SS15/4,<br>47500 Subang Jaya,<br>Selangor, Malaysia</li>
+                            <li><a href="#"><i class="fa fa-envelope"></i></a>mobileverse@gmail.com</li>
+                            <li><a href="#"><i class="fa fa-phone"></i></a>+012-345 6789</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="follow">
+                  <ul class="social_icon">
+                      <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                  </ul>
+              </div>
+          </div>     
             <div class="copyright">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-10 offset-md-1">
-                        <p>Copyright 2019 All Right Reserved By<a href="https://html.design/"> Free  html Templates</a></p>
-                     </div>
-                  </div>
-               </div>
+                <div class="container">
+                    <p>&copy; 2019 All Rights Reserved by <a href="https://html.design/">Free HTML Templates</a></p>
+                </div>
             </div>
-         </div>
-      </footer>
+        </div>
+    </footer>     
       <!-- end footer -->
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>

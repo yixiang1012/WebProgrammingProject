@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us</title>
   <style>
-    /* 页面通用样式 */
     body {
       font-family: Arial, sans-serif;
-      background-color: #e5e4e1;
+      background-color: #343a5e;
       margin: 0;
       padding: 0;
       color: #333;
@@ -26,6 +25,40 @@
       font-size: 40px;
       font-weight: bold;
     }
+
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  float: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 30px 50px;
+  text-decoration: none;
+}
+   
+
+li a:hover {
+  background-color: #111;
+}
+
+li.back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
     /* 主体内容样式 */
     .section {
       max-width: 800px;
@@ -147,6 +180,14 @@
 </head>
 <body>
 
+  <ul>
+    <li class="back"><a href="index.html">< </a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="product.html">Product</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="support.html">Support</a></li>
+  </ul>
+  
   <header>
     About Us
   </header>
