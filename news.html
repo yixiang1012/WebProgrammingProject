@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>News & Promotion</title>
+<title>News</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -38,7 +38,6 @@ li a {
   text-decoration: none;
 }
    
-
 li a:hover {
   background-color: #111;
 }
@@ -65,32 +64,55 @@ li.back {
   font-size: 50px;
 }
 
-.center-text {
-  text-align: center;
-  margin-top: 60px;
-  font-size: 35px;
-  color: black;
-}
-
-table, th, td {
-  border:1px solid black;
-  border-collapse: collapse;
-  border-collapse: separate; 
-  border-spacing: 10px;
-  padding-left: 20px;
-  text-align:left;
-  margin: auto;
+table {
+  border: none;
+  width: 80%;
+  margin: 50px auto;
+  text-align: left;
   font-size: 20px;
-  margin-top: 50px;
-  width: 33.33%;
-  border-style: hidden;
-  margin-bottom: 100px;
 }
 
-img {
+table img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 350px; /* Increased width */
+  height: auto;
+}
+
+table th {
+  text-align: center;
+  font-size: 22px;
+  padding: 20px 10px; /* Added padding */
+}
+
+table tr {
+  margin-bottom: 20px; /* Adds space between rows */
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button-container button:hover {
+  background-color: #434343;
+}
+
+hr {
+  border: 1px solid #ccc;
+  margin: 30px auto;
+  width: 90%;
 }
 
 .footer {
@@ -104,7 +126,6 @@ img {
   margin-top: 30px;
   padding-left: 40px;
 }
-
 </style>
 </head>
 <body>
@@ -121,36 +142,72 @@ img {
   <div class="centered">News</div>
 </div>
 
-<h2 class="center-text">News</h2>
-
-<table style="width:80%">
-  <tr style="height:200px">
-    <td><a href="C:/Users/acer/Documents/Group%20Project%20(Web%20Design)/news1.html"><img src="news_image/latest.jpg" width="280" height="210" ></td>
-    <td><a href="C:/Users/acer/Documents/Group%20Project%20(Web%20Design)/news2.html"><img src="news_image/users.jpg" width="250" height="210" ></td>
-    <td><a href="C:/Users/acer/Documents/Group%20Project%20(Web%20Design)/news3.html"><img src="news_image/quality.jpg" width="250" height="210" ></td>
+<table>
+  <tr>
+    <td><a href="news1.html"><img src="news_image/latest.jpg" alt="iPhone 16 Plus"></a></td>
+    <th>
+      The Arrival of iPhone 16 Plus
+      <div class="button-container">
+        <button onclick="location.href='news1.html'">Read More</button>
+      </div>
+    </th>
   </tr>
-  <tr style="height:10px">
-    <th>The Arrival of iPhone 16 Pro Plus Max Ultra</th>
-    <th>iPhone's Dominance in 2024: The Smartphone of Choice for Most Users</th>
-    <th>iPhone's Commitment to Quality: A Benchmark in Smartphone Excellence</th>
+  <tr><td colspan="2"><hr></td></tr>
+  
+  <tr>
+    <td><a href="news2.html"><img src="news_image/users.jpg" alt="iPhone Dominance"></a></td>
+    <th>
+      iPhone's Dominance in 2024: The Smartphone of Choice for Most Users
+      <div class="button-container">
+        <button onclick="location.href='news2.html'">Read More</button>
+      </div>
+    </th>
   </tr>
-</table>
-
-<hr> 
-
-<h2 class="center-text">Promotion</h2>
-
-<table style="width:80%">
-  <tr style="height:200px">
-    <td><a href="C:/Users/acer/Documents/Group%20Project%20(Web%20Design)/promotion1.html"><img src="news_image/promo1.jpg" width="250" height="190" ></td>
-    <td><a href="C:/Users/acer/Documents/Group%20Project%20(Web%20Design)/promotion2.html"><img src="news_image/promo2.jpeg" width="250" height="210" ></td>
-    <td><a href="C:/Users/acer/Documents/Group%20Project%20(Web%20Design)/promotion3.html"><img src="news_image/promo3.jpg" width="250" height="210" ></td>
+  <tr><td colspan="2"><hr></td></tr>
+  
+  <tr>
+    <td><a href="news3.html"><img src="news_image/quality.jpg" alt="iPhone Quality"></a></td>
+    <th>
+      iPhone's Commitment to Quality: A Benchmark in Smartphone Excellence
+      <div class="button-container">
+        <button onclick="location.href='news3.html'">Read More</button>
+      </div>
+    </th>
   </tr>
-  <tr style="height:10px">
-    <th>MobileVerse's First Year Anniversary: Exclusive Discount Celebration</th>
-    <th>Join Our Membership Program for Exclusive Discounts</th>
-    <th>Enjoy Discounts by Purchasing MobileVerse Products with Credit Card Points</th>
+  <tr><td colspan="2"><hr></td></tr>
+  
+  <tr>
+    <td><a href="promotion1.html"><img src="news_image/promo1.jpg" alt="Anniversary Promo"></a></td>
+    <th>
+      MobileVerse's First Year Anniversary: Exclusive Discount Celebration
+      <div class="button-container">
+        <button onclick="location.href='promotion1.html'">Read More</button>
+      </div>
+    </th>
   </tr>
+  <tr><td colspan="2"><hr></td></tr>
+  
+  <tr>
+    <td><a href="promotion2.html"><img src="news_image/promo2.jpeg" alt="Membership Promo"></a></td>
+    <th>
+      Join Our Membership Program for Exclusive Discounts
+      <div class="button-container">
+        <button onclick="location.href='promotion2.html'">Read More</button>
+      </div>
+    </th>
+  </tr>
+  <tr><td colspan="2"><hr></td></tr>
+  
+  <tr>
+    <td><a href="promotion3.html"><img src="news_image/promo3.jpg" alt="Credit Card Promo"></a></td>
+    <th>
+      Enjoy Discounts by Purchasing MobileVerse Products with Credit Card Points
+      <div class="button-container">
+        <button onclick="location.href='promotion3.html'">Read More</button>
+      </div>
+    </th>
+  </tr>
+  <tr><td colspan="2"><hr></td></tr>
 </table>
 
 <div class="footer">
