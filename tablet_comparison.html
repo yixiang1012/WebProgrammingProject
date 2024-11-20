@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Phone Models</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Roboto, Helvetica, sans-serif;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 30px 50px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        li.back {
+           position: absolute;
+           left: 0;
+           height: 100%;
+        }
+
+        .topic {
+            text-align: center;
+            color: black;
+            font-weight: bold;
+            font-size: 30px;
+            margin-top: 20px;
+        }
+
+        .select-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px; 
+            margin-top: 20px;
+        }
+
+        .select-box {
+            width: 30%;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        #output {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .output-box {
+            width: 40%;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px;
+            line-height: 1.5;
+        }
+
+        .phone-image {
+          width: 250px;         
+          height: 300px;           
+        }
+
+        .spec-container {
+            margin-bottom: 15px;
+            padding: 20px;
+        }
+
+        .spec-topic {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .spec-detail {
+         padding-left: 10px;
+         font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="back"><a href="index.html">< Back </a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="support.html">Support</a></li>
+    </ul>
+
+    <div class="topic">
+        <h2>Compare Tablet Models</h2>
+    </div>
+
+    <div class="select-container">
+        <select id="optionSelect1" class="select-box" onchange="displayOutput()">
+        <option value="">--Select Model--</option>
+          <optgroup label="iPad"></optgroup>
+            <option value="iPad Pro">iPad Pro</option>
+            <option value="iPad Air">iPad Air</option>
+            <option value="iPad">iPad</option>
+          </optgroup>
+
+          <option disabled> </option>
+
+          <optgroup label="HUAWEI"></optgroup>
+            <option value="HUAWEI MatePad Pro 12.2-inch">HUAWEI MatePad Pro 12.2-inch</option>
+            <option value="HUAWEI MatePad 11.5S">HUAWEI MatePad 11.5S</option>
+            <option value="HUAWEI MatePad Air">HUAWEI MatePad Air</option>
+          </optgroup>
+
+        </select>
+
+        <select id="optionSelect2" class="select-box" onchange="displayOutput()">
+            <option value="">--Select Model--</option>
+            <optgroup label="iPad"></optgroup>
+              <option value="iPad Pro">iPad Pro</option>
+              <option value="iPad Air">iPad Air</option>
+              <option value="iPad">iPad</option>
+          </optgroup>
+
+          <option disabled> </option>
+
+          <optgroup label="HUAWEI"></optgroup>
+            <option value="HUAWEI MatePad Pro 12.2-inch">HUAWEI MatePad Pro 12.2-inch</option>
+            <option value="HUAWEI MatePad 11.5S">HUAWEI MatePad 11.5S</option>
+            <option value="HUAWEI MatePad Air">HUAWEI MatePad Air</option>
+          </optgroup>
+        </select>
+    </div>
+
+    <!-- Output area -->
+    <div id="output">
+        <div id="output1" class="output-box"></div>
+        <div id="output2" class="output-box"></div>
+    </div>
+
+    <script>
+const phoneSpecs = {
+"iPad Pro": {
+    display: "11-inch or 12.9-inch Liquid Retina display, ProMotion, True Tone, P3 wide color",
+    processor: "Apple M2 chip",
+    storage: "128GB, 256GB, 512GB, 1TB, 2TB",
+    ram: "RAM: 8GB or 16GB",
+    camera: "Dual 12MP (Wide, Ultra Wide), Night mode, Deep Fusion, 4K Dolby Vision HDR recording",
+    battery: "Up to 10 hours of surfing the web on Wi‑Fi",
+    os: "iPadOS",
+    ports: "USB-C with Thunderbolt / USB 4",
+    otherFeatures: "Face ID, 5G (optional), Apple Pencil (2nd generation) support, Magic Keyboard compatibility",
+    image: "tablet_image/ipad_pro.png"
+  },
+  "iPad Air": {
+    display: "10.9-inch Liquid Retina display, True Tone, P3 wide color",
+    processor: "Apple M1 chip",
+    storage: "64GB, 256GB",
+    ram: "8GB",
+    camera: "12MP Wide rear camera/ 12MP Ultra-Wide front camera with Center Stage",
+    battery: "Up to 10 hours of surfing the web on Wi‑Fi",
+    os: "iPadOS",
+    ports: "USB-C",
+    otherFeatures: "Touch ID, 5G (optional), Apple Pencil (2nd generation) support, Magic Keyboard compatibility",
+    image: "tablet_image/ipad_air.png"
+  },
+  "iPad": {
+    display: "10.9-inch Liquid Retina display",
+    processor: "A14 Bionic chip",
+    storage: "64GB, 256GB",
+    ram: "4GB",
+    camera: "12MP Wide rear camera / 12MP Ultra-Wide front camera with Center Stage",
+    battery: "Up to 10 hours of surfing the web on Wi‑Fi",
+    os: "iPadOS",
+    ports: "USB-C",
+    otherFeatures: "Touch ID, Apple Pencil (1st generation) support, Smart Keyboard compatibility",
+    image: "tablet_image/ipad.png"
+  },
+  "HUAWEI MatePad Pro 12.2-inch": {
+    display: "12.6-inch OLED display, 2560 x 1600 resolution",
+    processor: "Kirin 990 5G (Octa-core)",
+    storage: "128GB, 256GB, 512GB",
+    ram: "6GB / 8GB",
+    camera: "13MP rear camera / 8MP front camera",
+    battery: "10,050mAh, supports fast charging (40W)",
+    os: "HarmonyOS",
+    ports: "USB-C",
+    otherFeatures: "Face Unlock, Huawei M-Pencil support, 5G (optional), Multi-window support, Magnetic keyboard compatibility",
+    image: "tablet_image/huawei-matepad-pro-12-2-compare.jpg"
+  },
+  "HUAWEI MatePad 11.5S": {
+    display: "11.5-inch LCD, 2560 x 1600 resolution",
+    processor: "Kirin 9000E 5G (Octa-core)",
+    storage: "128GB, 256GB",
+    ram: "6GB / 8GB",
+    camera: "13MP rear camera / 8MP front camera",
+    battery: "7,250mAh, supports fast charging (22.5W)",
+    os: "HarmonyOS",
+    ports: "USB-C",
+    otherFeatures: "Fingerprint sensor, Huawei M-Pencil support, Multi-window support, Magnetic keyboard compatibility",
+    image: "tablet_image/matepad-11-5-s-compare.jpg"
+  },
+  "HUAWEI MatePad Air": {
+    display: "10.4-inch IPS LCD, 2000 x 1200 resolution",
+    processor: "Kirin 820 5G (Octa-core)",
+    storage: "64GB, 128GB",
+    ram: "4GB / 6GB",
+    camera: "8MP rear camera / 8MP front camera",
+    battery: "7,250mAh, supports fast charging (18W)",
+    os: "HarmonyOS",
+    ports: "USB-C",
+    otherFeatures: "Face Unlock, Huawei M-Pencil support, 5G (optional)",
+    image: "tablet_image/matepad-air-compare.jpg"
+  },
+};
+
+  function displayOutput() {
+    const selectedValue1 = document.getElementById("optionSelect1").value;
+    const selectedValue2 = document.getElementById("optionSelect2").value;
+    const outputDiv1 = document.getElementById("output1");
+    const outputDiv2 = document.getElementById("output2");
+
+    // Output content for Model 1 //
+    if (selectedValue1 && phoneSpecs[selectedValue1]) {
+        const specs1 = phoneSpecs[selectedValue1];
+        outputDiv1.innerHTML = `
+    <img src="${specs1.image}" alt="${selectedValue1}" class="phone-image">
+    <div class="spec-container">
+        <div class="spec-topic">Display</div>
+        <div class="spec-detail">${specs1.display}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Processor</div>
+        <div class="spec-detail">${specs1.processor}</div>
+    </div>
+        <div class="spec-container">
+        <div class="spec-topic">Storage</div>
+        <div class="spec-detail">${specs1.storage}</div>
+    </div>
+        <div class="spec-container">
+        <div class="spec-topic">RAM</div>
+        <div class="spec-detail">${specs1.ram}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Camera</div>
+        <div class="spec-detail">${specs1.camera}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Battery</div>
+        <div class="spec-detail">${specs1.battery}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Operating System</div>
+        <div class="spec-detail">${specs1.os}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Ports</div>
+        <div class="spec-detail">${specs1.ports}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Other Features</div>
+        <div class="spec-detail">${specs1.otherFeatures}</div>
+    </div>
+`;
+
+    } else {
+        outputDiv1.innerHTML = "";
+    }
+
+    // Output content for Model 2 //
+    if (selectedValue2 && phoneSpecs[selectedValue2]) {
+        const specs2 = phoneSpecs[selectedValue2];
+        outputDiv2.innerHTML = `
+    <img src="${specs2.image}" alt="${selectedValue2}" class="phone-image">
+    <div class="spec-container">
+        <div class="spec-topic">Display</div>
+        <div class="spec-detail">${specs2.display}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Processor</div>
+        <div class="spec-detail">${specs2.processor}</div>
+    </div>
+        <div class="spec-container">
+        <div class="spec-topic">Storage</div>
+        <div class="spec-detail">${specs2.storage}</div>
+    </div>
+        <div class="spec-container">
+        <div class="spec-topic">RAM</div>
+        <div class="spec-detail">${specs2.ram}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Camera</div>
+        <div class="spec-detail">${specs2.camera}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Battery</div>
+        <div class="spec-detail">${specs2.battery}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Operating System</div>
+        <div class="spec-detail">${specs2.os}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Ports</div>
+        <div class="spec-detail">${specs2.ports}</div>
+    </div>
+    <div class="spec-container">
+        <div class="spec-topic">Other Features</div>
+        <div class="spec-detail">${specs2.otherFeatures}</div>
+    </div>
+`;
+
+
+    } else {
+        outputDiv2.innerHTML = "";
+    }
+}
+
+    </script>
+</body>
+</html>

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <title>About Us</title>
   <style>
     body {
@@ -167,15 +168,107 @@ li.back {
       font-size: 14px;
       color: #666;
     }
-    /* footer-style */
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #3f4b7f;
-      color: #fff;
-      font-size: 16px;
-      margin-top: 30px;
-    }
+/** footer **/
+
+.footer {
+     background-color: #180552;
+     padding: 60px 0;
+     text-align: left;
+     margin-top: 80px;
+ }
+ 
+ .support-topic {
+     font-size: 20px;
+ }
+
+ .footer h3 {
+     color: #fff;
+     font-weight: 400;
+     font-size: 24px;
+     text-transform: uppercase;
+     margin-bottom: 20px;
+ }
+ 
+ .footer ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+ }
+ 
+ .footer .social_icon {
+     display: flex;
+     gap: 20px;
+     padding-top: 20px;
+     margin-left: 170px;
+ }
+
+ .footer .link_icon li,
+ .footer .location_icon li,
+ .footer .social_icon li {
+     margin-bottom: 10px;
+     display: flex;
+     align-items: center;
+ }
+
+ .footer .social_icon li {
+     float: none;
+ }
+ 
+ .footer .link_icon li a,
+ .footer .location_icon li a,
+ .footer .social_icon li a {
+     color: #fff;
+     font-size: 16px;
+     text-decoration: none;
+     display: inline-flex;
+     align-items: center;
+ }
+ 
+ .footer .link_icon li a i,
+ .footer .location_icon li a i {
+     margin-right: 10px;
+     font-size: 18px;
+ }
+ 
+ .footer .social_icon li a {
+     width: 40px;
+     height: 40px;
+     background: #fff;
+     color: #180552;
+     border-radius: 50%;
+     font-size: 18px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transition: background 0.3s, color 0.3s;
+ }
+ 
+ .footer .social_icon li a:hover {
+     background: #fbca47;
+     color: #000;
+ }
+ 
+ .footer .location_icon li a:hover,
+ .footer .link_icon li a:hover {
+     color: #fbca47;
+ }
+ 
+ .footer .follow p {
+     color: #fff;
+     font-size: 15px;
+     margin-bottom: 10px;
+ }
+ 
+ .copyright {
+     padding: 20px 0;
+     text-align: center;
+     color: #fff;
+     font-size: 16px;
+     border-top: 1px solid #301e64;
+ }
+
+
+/** end footer **/
   </style>
 </head>
 <body>
