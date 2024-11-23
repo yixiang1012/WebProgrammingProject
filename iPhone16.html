@@ -8,7 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Customization Services</title>
+      <title>iPhone 16</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -30,6 +30,41 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
       <style>
 
+        .nav ul {
+           list-style-type: none;
+           margin: 0;
+           padding: 0;
+           display: flex;
+           justify-content: center;
+           background-color: #333;
+           width: 100%;
+           position: relative;
+        }
+
+        .nav ul li {
+           display: inline-block;
+           flex: 0; /* Ensure items only take the space they need */
+        }
+
+        .nav ul li.back {
+           position: absolute;
+           left: 0;
+           top: 0;
+           height: 100%;
+        }
+
+        .nav ul li a {
+           display: block;
+           color: white;
+           text-align: center;
+           padding: 30px 50px;
+           text-decoration: none;
+        }
+
+        .nav ul li a:hover {
+            background-color: #111;
+        }
+        
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -193,7 +228,7 @@
            font-size: 16px;
            border-top: 1px solid #301e64;
         }
-/** end footer **/
+        /** end footer **/
      </style>
    </head>
    <!-- body -->
@@ -203,11 +238,26 @@
          <div class="loader"><img src="images/loading.gif" alt="#" /></div>
       </div>
 
+<div class="nav">
+  <ul>
+    <li class="back"><a href="news.html">&lt; Back</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="product.html">Product</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="support.html">Support</a></li>
+  </ul>
+</div>
+
       <header>
         <div style="text-align: center; margin-top: 20px;">
         <img src="phone_image/iphone16.png" alt="iPhone 16">
         <h1 style="margin-top: 10px; font-weight: bold;">iPhone 16</h1>
         <p style="font-size: 20px; color: #333; margin-top: 5px;">RM3,999</p>
+        <div style="margin-top: 20px;">
+            <a href="cart.html" style="display: inline-block; padding: 10px 20px; background-color: black; color: white; border: none; border-radius: 5px; text-align: center; text-decoration: none; margin: 5px;">Add to Cart</a>
+            <a href="checkout.html" style="display: inline-block; padding: 10px 20px; background-color: black; color: white; border: none; border-radius: 5px; text-align: center; text-decoration: none; margin: 5px;">Buy Now</a>
+        </div>
+        
         </div>
       </header>
 
