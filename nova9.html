@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>HUAWEI Nova 9</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/product-style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <style>
+
+        .nav ul {
+           list-style-type: none;
+           margin: 0;
+           padding: 0;
+           display: flex;
+           justify-content: center;
+           background-color: #333;
+           width: 100%;
+           position: relative;
+        }
+
+        .nav ul li {
+           display: inline-block;
+           flex: 0; /* Ensure items only take the space they need */
+        }
+
+        .nav ul li.back {
+           position: absolute;
+           left: 0;
+           top: 0;
+           height: 100%;
+        }
+
+        .nav ul li a {
+           display: block;
+           color: white;
+           text-align: center;
+           padding: 30px 50px;
+           text-decoration: none;
+        }
+
+        .nav ul li a:hover {
+            background-color: #111;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        body h1 {
+            color: #000;
+            font-family: Arial, sans-serif;
+        }
+
+        body h2 {
+            color: #000;
+        }
+
+        hr {
+            width: 80%;
+        }
+
+        header, section {
+            padding: 20px;
+        }
+        header img {
+            max-width: 300px;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #commentsSection p {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+ 
+        /** footer **/
+        .footer {
+           background-color: #180552;
+           padding: 60px 0;
+           text-align: left;
+           margin-top: 80px;
+           color: white;
+        }
+ 
+        .support-topic {
+           font-size: 20px;
+        }
+
+        .footer h3 {
+           color: #fff;
+           font-weight: 400;
+           font-size: 24px;
+           text-transform: uppercase;
+           margin-bottom: 20px;
+        }
+ 
+        .footer ul {
+           list-style: none;
+           padding: 0;
+           margin: 0;
+        }
+ 
+        .footer .social_icon {
+           display: flex;
+           gap: 20px;
+           padding-top: 20px;
+           margin-left: 170px;
+        }
+
+        .footer .link_icon li,
+        .footer .location_icon li,
+        .footer .social_icon li {
+           margin-bottom: 10px;
+           display: flex;
+           align-items: center;
+        }
+
+        .footer .social_icon li {
+           float: none;
+        }
+ 
+        .footer .link_icon li a,
+        .footer .location_icon li a,
+        .footer .social_icon li a {
+           color: #fff;
+           font-size: 16px;
+           text-decoration: none;
+           display: inline-flex;
+           align-items: center;
+        }
+ 
+        .footer .link_icon li a i,
+        .footer .location_icon li a i {
+           margin-right: 10px;
+           font-size: 18px;
+        }
+ 
+        .footer .social_icon li a {
+           width: 40px;
+           height: 40px;
+           background: #fff;
+           color: #180552;
+           border-radius: 50%;
+           font-size: 18px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           transition: background 0.3s, color 0.3s;
+        }
+ 
+        .footer .social_icon li a:hover {
+           background: #fbca47;
+           color: #000;
+        }
+
+        .footer .location_icon li a:hover,
+        .footer .link_icon li a:hover {
+           color: #fbca47;
+        }
+ 
+        .footer .follow p {
+           color: #fff;
+           font-size: 15px;
+           margin-bottom: 10px;
+        }
+ 
+        .copyright {
+           padding: 20px 0;
+           text-align: center;
+           color: #fff;
+           font-size: 16px;
+           border-top: 1px solid #301e64;
+        }
+        /** end footer **/
+     </style>
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+      </div>
+
+<div class="nav">
+  <ul>
+    <li class="back"><a href="news.html">&lt; Back</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="product.html">Product</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="support.html">Support</a></li>
+  </ul>
+</div>
+
+      <header>
+        <div style="text-align: center; margin-top: 20px;">
+        <img src="phone_image/nova9.png" alt="nova9">
+        <h1 style="margin-top: 10px; font-weight: bold;">HUAWEI Nova 9</h1>
+        <p style="font-size: 20px; color: #333; margin-top: 5px;">RM1,799</p>
+        <div style="margin-top: 20px;">
+            <a href="cart.html" style="display: inline-block; padding: 10px 20px; background-color: black; color: white; border: none; border-radius: 5px; text-align: center; text-decoration: none; margin: 5px;">Add to Cart</a>
+            <a href="checkout.html" style="display: inline-block; padding: 10px 20px; background-color: black; color: white; border: none; border-radius: 5px; text-align: center; text-decoration: none; margin: 5px;">Buy Now</a>
+        </div>
+        
+        </div>
+      </header>
+
+      <hr>
+
+      <section style="text-align: center; margin-top: 20px;">
+        <h2>Specifications</h2>
+        <table>
+            <tr><th>Feature</th><th>Details</th></tr>
+            <tr><td>Display</td><td>6.57-inch OLED, 120Hz</td></tr>
+            <tr><td>Processor</td><td>Snapdragon 778G 4G</td></tr>
+            <tr><td>RAM</td><td>8GB</td></tr>
+            <tr><td>Storage</td><td>128GB / 256GB</td></tr>
+            <tr><td>Camera</td><td>50 MP (Main) + 8 MP (Ultra Wide) + 2 MP (Depth)</td></tr>
+            <tr><td>Front Camera</td><td>32 MP</td></tr>
+            <tr><td>Battery</td><td>4300 mAh, 66W Fast Charging</td></tr>
+            <tr><td>Operating System</td><td>EMUI 12 (based on Android 11)</td></tr>
+            <tr><td>Connectivity</td><td>4G, Wi-Fi 6, Bluetooth 5.2</td></tr>
+            <tr><td>Build</td><td>Glass Front & Back, Aluminum Frame</td></tr>
+            <tr><td>Water Resistance</td><td>No</td></tr>
+            <tr><td>Audio</td><td>Stereo Speakers, No 3.5mm Jack</td></tr>
+            <tr><td>Security</td><td>In-display Fingerprint</td></tr>
+            <tr><td>Dimensions</td><td>160 x 73.7 x 7.8 mm</td></tr>
+            <tr><td>Weight</td><td>175g</td></tr>
+        </table>               
+    </section>
+
+    <hr>
+
+    <section style="text-align: center; margin-top: 20px;">
+        <h2>Comment</h2>
+        <div style="max-width: 80%; margin: 0 auto;">
+            <textarea id="commentInput" placeholder="Write your comment here..."></textarea>
+            <br>
+            <button onclick="addComment()">Send</button>
+            <div id="commentsSection" style="margin-top: 20px; text-align: left; border-top: 1px solid #ddd; padding-top: 10px;">
+                <!-- Comments will appear here -->
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function addComment() {
+            const commentInput = document.getElementById('commentInput');
+            const commentsSection = document.getElementById('commentsSection');
+
+            if (commentInput.value.trim() !== "") {
+                const comment = document.createElement('p');
+                comment.textContent = commentInput.value;
+                commentsSection.appendChild(comment);
+                commentInput.value = ""; // Clear input
+            } else {
+                alert("Please write a comment before sending.");
+            }
+        }
+    </script>
+            
+      <footer>
+         <div class="footer">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-lg-3 col-md-6 col-sm-6">
+                         <h3>Quick Link</h3>
+                         <ul class="link_icon">
+                             <li><a href="index.html"><i class="fa fa-chevron-right"></i>Home</a></li>
+                             <li><a href="about.html"><i class="fa fa-chevron-right"></i>About</a></li>
+                             <li><a href="news.html"><i class="fa fa-chevron-right"></i>News</a></li>
+                             <li><a href="products.html"><i class="fa fa-chevron-right"></i>Products</a></li>
+                             <li><a href="phone.html"><i class="fa fa-chevron-right"></i>Phones</a></li>
+                             <li><a href="tablet.html"><i class="fa fa-chevron-right"></i>Tablets</a></li>
+                             <li><a href="support.html"><i class="fa fa-chevron-right"></i>Support Center</a></li>
+                         </ul>
+                     </div>
+                     
+                     <div class="col-lg-3 col-md-6 col-sm-6">
+                         <div class="support-topic">After Sales Support</div><br>
+                         <ul class="link_icon">
+                             <li><a href="faq.html"><i class="fa fa-chevron-right"></i>Frequently Asked Questions</a></li>
+                             <li><a href="mailto:MobileVerse@gmail.com"><i class="fa fa-chevron-right"></i>Email Support</a></li>
+                             <li><a href="tel:011-8520-7118"><i class="fa fa-chevron-right"></i>Phone Support</a></li>
+                             <li><a href="cargo_status.html"><i class="fa fa-chevron-right"></i>Check Cargo Status</a></li>
+                         </ul>
+                     </div>                   
+                     <div class="col-lg-3 col-md-6 col-sm-6">
+                         <div class="support-topic">Repair Support</div><br>
+                         <ul class="link_icon">
+                             <li><a href="make_appointment.html"><i class="fa fa-chevron-right"></i>Make an Appointment</a></li>
+                             <li><a href="repair_status.html"><i class="fa fa-chevron-right"></i>Check Repair Status</a></li>
+                             <li><a href="warranty.html"><i class="fa fa-chevron-right"></i>Buy Extended Warranty</a></li>
+                         </ul>
+                     </div>
+                     <div class="col-lg-3 col-md-6 col-sm-6">
+                         <h3>Contact Us</h3>
+                         <ul class="location_icon">
+                             <li><a href="#"><i class="fa fa-map-marker"></i></a>No. 12, Jalan SS15/4,<br>47500 Subang Jaya,<br>Selangor, Malaysia</li>
+                             <li><a href="#"><i class="fa fa-envelope"></i></a>mobileverse@gmail.com</li>
+                             <li><a href="#"><i class="fa fa-phone"></i></a>+012-345 6789</li>
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-3 col-md-6 col-sm-6">
+               <div class="follow">
+                   <ul class="social_icon">
+                       <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                       <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                       <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                       <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                   </ul>
+               </div>
+           </div>     
+             <div class="copyright">
+                 <div class="container">
+                     <p>&copy; 2019 All Rights Reserved by <a href="https://html.design/">Free HTML Templates</a></p>
+                 </div>
+             </div>
+         </div>
+     </footer>
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+
+      <script>
+         document.getElementById('fileID').addEventListener('change', function() {
+            const fileName = this.files[0] ? this.files[0].name : 'No file chosen';
+            document.getElementById('fileName').textContent = fileName;
+         });
+      </script>
+   </body>
+
+   
+</html>
