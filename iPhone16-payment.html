@@ -229,34 +229,44 @@
          <h2 style="text-align: center; color: black;">Payment Method</h2>
          <div class="checkbox-column" style="display: flex; flex-direction: column; align-items: left; gap: 30px; margin-top: 40px; margin-left: 43%;">
             <label>
-               <input type="radio" name="options" value="Payment1" style="transform: scale(1.5);">
+               <input type="radio" name="pay_options" value="Payment1" style="transform: scale(1.5);">
                <img src="payment_images/credit-card.png" alt="Credit Card" style="max-width: 30px; margin-right: 15px; margin-left: 15px;">
                <span style="font-size: 1em;">Credit / Debit Card</span>
             </label>
             <label>
-               <input type="radio" name="options" value="Payment2" style="transform: scale(1.5);">
+               <input type="radio" name="pay_options" value="Payment2" style="transform: scale(1.5);">
                <img src="payment_images/online-banking.png" alt="Online Banking" style="max-width: 30px; margin-right: 15px; margin-left: 15px;"> 
                <span style="font-size: 1em;">Online Banking</span> 
             </label>
             <label>
-               <input type="radio" name="options" value="Payment3" style="transform: scale(1.5);">
+               <input type="radio" name="pay_options" value="Payment3" style="transform: scale(1.5);">
                <img src="payment_images/e-wallet.png" alt="E-Wallet" style="max-width: 30px; margin-right: 15px; margin-left: 15px;"> 
                <span style="font-size: 1em;">E-Wallet</span> 
             </label>
             <label>
-               <input type="radio" name="options" value="Payment4" style="transform: scale(1.5);">
+               <input type="radio" name="pay_options" value="Payment4" style="transform: scale(1.5);">
                <img src="payment_images/cash.png" alt="Cash" style="max-width: 30px; margin-right: 15px; margin-left: 15px;">
                <span style="font-size: 1em;">Cash</span>
             </label>
          </div>       
         
       <div style="text-align: center; margin-top: 80px;">
-         <a href="success.html" style="text-decoration: none;">
+         <a href="success.html" style="text-decoration: none;" id="pay-now-btn">
          <button type="button" style="padding: 10px 20px; font-size: 18px; background-color: black; color: white; border: none; border-radius: 5px; cursor: pointer;">
             Pay Now
          </button>
       </div>
    </div>
+
+   <script>
+      document.getElementById('pay-now-btn').addEventListener('click', function(event) {
+         const selectedPayment = document.querySelector('input[name="pay_options"]:checked');
+         if (!selectedPayment) {
+            event.preventDefault(); 
+            alert('Please select a payment method before proceeding.');
+         }
+      });
+   </script>
 
       <footer>
          <div class="footer">
