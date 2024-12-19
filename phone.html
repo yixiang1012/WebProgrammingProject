@@ -8,7 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Phone Products</title>
+      <title>Product</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -30,7 +30,40 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
       <style>
 
- 
+.nav ul {
+           list-style-type: none;
+           margin: 0;
+           padding: 0;
+           display: flex;
+           justify-content: center;
+           background-color: #333;
+           width: 100%;
+           position: relative;
+        }
+
+        .nav ul li {
+           display: inline-block;
+           flex: 0; /* Ensure items only take the space they need */
+        }
+
+        .nav ul li.back {
+           position: absolute;
+           left: 0;
+           top: 0;
+           height: 100%;
+        }
+
+        .nav ul li a {
+           display: block;
+           color: white;
+           text-align: center;
+           padding: 30px 50px;
+           text-decoration: none;
+        }
+
+        .nav ul li a:hover {
+            background-color: #111;
+        }
  
          .product-section {
              margin: 50px 20px;
@@ -130,105 +163,105 @@
              color: white;
              font-weight: bold
          }
-         
-/** footer **/
 
-.footer {
-     background-color: #180552;
-     padding: 60px 0;
-     text-align: left;
-     margin-top: 80px;
- }
+        /** footer **/
+        .footer {
+           background-color: #180552;
+           padding: 60px 0;
+           text-align: left;
+           margin-top: 80px;
+           color: white;
+        }
  
- .support-topic {
-     font-size: 20px;
- }
+        .support-topic {
+           font-size: 20px;
+        }
 
- .footer h3 {
-     color: #fff;
-     font-weight: 400;
-     font-size: 24px;
-     text-transform: uppercase;
-     margin-bottom: 20px;
- }
+        .footer h3 {
+           color: #fff;
+           font-weight: 400;
+           font-size: 24px;
+           text-transform: uppercase;
+           margin-bottom: 20px;
+        }
  
- .footer ul {
-     list-style: none;
-     padding: 0;
-     margin: 0;
- }
+        .footer ul {
+           list-style: none;
+           padding: 0;
+           margin: 0;
+        }
  
- .footer .social_icon {
-     display: flex;
-     gap: 20px;
-     padding-top: 20px;
-     margin-left: 170px;
- }
+        .footer .social_icon {
+           display: flex;
+           gap: 20px;
+           padding-top: 20px;
+           margin-left: 170px;
+        }
 
- .footer .link_icon li,
- .footer .location_icon li,
- .footer .social_icon li {
-     margin-bottom: 10px;
-     display: flex;
-     align-items: center;
- }
+        .footer .link_icon li,
+        .footer .location_icon li,
+        .footer .social_icon li {
+           margin-bottom: 10px;
+           display: flex;
+           align-items: center;
+        }
 
- .footer .social_icon li {
-     float: none;
- }
+        .footer .social_icon li {
+           float: none;
+        }
  
- .footer .link_icon li a,
- .footer .location_icon li a,
- .footer .social_icon li a {
-     color: #fff;
-     font-size: 16px;
-     text-decoration: none;
-     display: inline-flex;
-     align-items: center;
- }
+        .footer .link_icon li a,
+        .footer .location_icon li a,
+        .footer .social_icon li a {
+           color: #fff;
+           font-size: 16px;
+           text-decoration: none;
+           display: inline-flex;
+           align-items: center;
+        }
  
- .footer .link_icon li a i,
- .footer .location_icon li a i {
-     margin-right: 10px;
-     font-size: 18px;
- }
+        .footer .link_icon li a i,
+        .footer .location_icon li a i {
+           margin-right: 10px;
+           font-size: 18px;
+        }
  
- .footer .social_icon li a {
-     width: 40px;
-     height: 40px;
-     background: #fff;
-     color: #180552;
-     border-radius: 50%;
-     font-size: 18px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     transition: background 0.3s, color 0.3s;
- }
+        .footer .social_icon li a {
+           width: 40px;
+           height: 40px;
+           background: #fff;
+           color: #180552;
+           border-radius: 50%;
+           font-size: 18px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           transition: background 0.3s, color 0.3s;
+        }
  
- .footer .social_icon li a:hover {
-     background: #fbca47;
-     color: #000;
- }
+        .footer .social_icon li a:hover {
+           background: #fbca47;
+           color: #000;
+        }
+
+        .footer .location_icon li a:hover,
+        .footer .link_icon li a:hover {
+           color: #fbca47;
+        }
  
- .footer .location_icon li a:hover,
- .footer .link_icon li a:hover {
-     color: #fbca47;
- }
+        .footer .follow p {
+           color: #fff;
+           font-size: 15px;
+           margin-bottom: 10px;
+        }
  
- .footer .follow p {
-     color: #fff;
-     font-size: 15px;
-     margin-bottom: 10px;
- }
- 
- .copyright {
-     padding: 20px 0;
-     text-align: center;
-     color: #fff;
-     font-size: 16px;
-     border-top: 1px solid #301e64;
- }
+        .copyright {
+           padding: 20px 0;
+           text-align: center;
+           color: #fff;
+           font-size: 16px;
+           border-top: 1px solid #301e64;
+        }
 
 
 /** end footer **/
@@ -243,9 +276,19 @@
          <div class="loader"><img src="images/loading.gif" alt="#" /></div>
       </div>
 
+      <div class="nav">
+        <ul>
+          <li class="back"><a href="index.html">&lt; Back</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </div>
+
       <div class="container_phone">
-         <img src="phone_image/phone_title.jpg" alt="title" style="width:100vw; height:500px;">
-         <div class="centered"> Phone</div>
+         <img src="phone_image/products.jpg" alt="title" style="width:100vw; height:500px;">
+         <div class="centered"> iPhone</div>
        </div>
       <header>
        
@@ -256,28 +299,28 @@
                 <div class="product-card">
                     <img src="phone_image/iphone13.png" alt="Product 1" style="width:150px; height:200px;">
                     <div class="overlay">
-                        <a href="#" class="info">Learn More</a>
+                        <a href="iPhone13.html" class="info">Learn More</a>
                     </div>
                     <h3>iPhone 13</h3>
                 </div>
                 <div class="product-card">
                     <img src="phone_image/iphone15pro.png" alt="Product 2" style="width:150px; height:200px;">
                     <div class="overlay">
-                        <a href="#" class="info">Learn More</a>
+                        <a href="iPhone15Pro.html" class="info">Learn More</a>
                     </div>
                     <h3>iPhone 15 Pro</h3>
                 </div>
                 <div class="product-card">
                     <img src="phone_image/iphone15.png" alt="Product 3" style="width:150px; height:200px;">
                     <div class="overlay">
-                        <a href="#" class="info">Learn More</a>
+                        <a href="iPhone15.html" class="info">Learn More</a>
                     </div>
                     <h3>iPhone 15 </h3>
                 </div>
                 <div class="product-card">
                     <img src="phone_image/iphone16.png" alt="Product 4" style="width:100px; height:200px;">
                     <div class="overlay">
-                        <a href="#" class="info">Learn More</a>
+                        <a href="iPhone16.html" class="info">Learn More</a>
                     </div>
                     <h3>iPhone 16</h3>
                 </div>               
@@ -290,28 +333,28 @@
               <div class="product-card">
                   <img src="phone_image/iphone16plus.png" alt="Product 1" style="width:100px; height:200px;">
                   <div class="overlay">
-                      <a href="#" class="info">Learn More</a>
+                      <a href="iPhone 16 Plus.html" class="info">Learn More</a>
                   </div>
-                  <h3>iPhone 16 plus</h3>
+                  <h3>iPhone 16 Plus</h3>
               </div>
               <div class="product-card">
                   <img src="phone_image/iphone15plus.png" alt="Product 2" style="width:150px; height:200px;">
                   <div class="overlay">
-                      <a href="#" class="info">Learn More</a>
+                      <a href="iPhone15Plus.html" class="info">Learn More</a>
                   </div>
                   <h3>iPhone 15 Plus</h3>
               </div>
               <div class="product-card">
                   <img src="phone_image/iphone11.png" alt="Product 3" style="width:150px; height:200px;">
                   <div class="overlay">
-                      <a href="#" class="info">Learn More</a>
+                      <a href="iPhone11.html" class="info">Learn More</a>
                   </div>
-                  <h3>iPhone 11 </h3>
+                  <h3>iPhone 11</h3>
               </div>
               <div class="product-card">
                   <img src="phone_image/iphonese2.png" alt="Product 4" style="width:150px; height:200px;">
                   <div class="overlay">
-                      <a href="#" class="info">Learn More</a>
+                      <a href="iPhoneSE2.html" class="info">Learn More</a>
                   </div>
                   <h3>iPhone SE 2</h3>
               </div>              
@@ -328,28 +371,28 @@
               <div class="product-card">
                   <img src="phone_image/nova12i.png" alt="Product 1" style="width:150px; height:200px;">
                   <div class="overlay">
-                      <a href="#" class="info">Learn More</a>
+                      <a href="nova12i.html" class="info">Learn More</a>
                   </div>
                   <h3>HUAWEI Nova 12i</h3>
               </div>
               <div class="product-card">
                   <img src="phone_image/nova10se.png" alt="Product 2" style="width:150px; height:200px;">
                   <div class="overlay">
-                      <a href="#" class="info">Learn More</a>
+                      <a href="nova10SE.html" class="info">Learn More</a>
                   </div>
                   <h3>HUAWEI Nova 10 SE</h3>
               </div>
               <div class="product-card">
                   <img src="phone_image/nova9.png" alt="Product 3" style="width:150px; height:200px;">
                   <div class="overlay">
-                      <a href="#" class="info">Learn More</a>
+                      <a href="nova9.html" class="info">Learn More</a>
                   </div>
                   <h3>HUAWEI Nova 9 </h3>
               </div>
               <div class="product-card">
                   <img src="phone_image/p40.png" alt="Product 4" style="width:100px; height:200px;">
                   <div class="overlay">
-                      <a href="#" class="info">Learn More</a>
+                      <a href="p40.html" class="info">Learn More</a>
                   </div>
                   <h3>HUAWEI P40</h3>
               </div>             
@@ -362,28 +405,28 @@
             <div class="product-card">
                 <img src="phone_image/pura70.png" alt="Product 1" style="width:150px; height:200px;">
                 <div class="overlay">
-                    <a href="#" class="info">Learn More</a>
+                    <a href="pura70.html" class="info">Learn More</a>
                 </div>
                 <h3>HUAWEI Pura 70</h3>
             </div>
             <div class="product-card">
                 <img src="phone_image/pura70pro.png" alt="Product 2" style="width:150px; height:200px;">
                 <div class="overlay">
-                    <a href="#" class="info">Learn More</a>
+                    <a href="pura70pro.html" class="info">Learn More</a>
                 </div>
                 <h3>HUAWEI Pura 70 Pro</h3>
             </div>
             <div class="product-card">
                 <img src="phone_image/p60pro.png" alt="Product 3" style="width:150px; height:200px;">
                 <div class="overlay">
-                    <a href="#" class="info">Learn More</a>
+                    <a href="p60pro.html" class="info">Learn More</a>
                 </div>
-                <h3>HUAWEI P60 Pro </h3>
+                <h3>HUAWEI P60 Pro</h3>
             </div>
             <div class="product-card">
                 <img src="phone_image/nova8.png" alt="Product 4" style="width:150px; height:200px;">
                 <div class="overlay">
-                    <a href="#" class="info">Learn More</a>
+                    <a href="nova8.html" class="info">Learn More</a>
                 </div>
                 <h3>HUAWEI Nova 8</h3>
             </div>           
@@ -399,28 +442,28 @@
            <div class="product-card">
                <img src="phone_image/xcover5.png" alt="Product 1" style="width:100px; height:200px;">
                <div class="overlay">
-                   <a href="#" class="info">Learn More</a>
+                   <a href="xcover5.html" class="info">Learn More</a>
                </div>
                <h3>SAMSUNG GALAXY XCOVER 5</h3>
            </div>
            <div class="product-card">
                <img src="phone_image/xcover6pro.png" alt="Product 2" style="width:150px; height:200px;">
                <div class="overlay">
-                   <a href="#" class="info">Learn More</a>
+                   <a href="xcover6pro.html" class="info">Learn More</a>
                </div>
                <h3>Samsung Galaxy Xcover6 Pro (5G)</h3>
            </div>
            <div class="product-card">
                <img src="phone_image/s22ultra.png" alt="Product 3" style="width:170px; height:200px;">
                <div class="overlay">
-                   <a href="#" class="info">Learn More</a>
+                   <a href="s22ultra.html" class="info">Learn More</a>
                </div>
                <h3>Samsung Galaxy S22 Ultra 5G</h3>
            </div>
            <div class="product-card">
                <img src="phone_image/s23.png" alt="Product 4" style="width:150px; height:200px;">
                <div class="overlay">
-                   <a href="#" class="info">Learn More</a>
+                   <a href="s23.html" class="info">Learn More</a>
                </div>
                <h3>Samsung Galaxy S23 (5G)</h3>
            </div>          
@@ -433,34 +476,35 @@
          <div class="product-card">
              <img src="phone_image/s22.png" alt="Product 1" style="width:150px; height:200px;">
              <div class="overlay">
-                 <a href="#" class="info">Learn More</a>
+                 <a href="s22.html" class="info">Learn More</a>
              </div>
              <h3>Samsung Galaxy S22 5G</h3>
          </div>
          <div class="product-card">
              <img src="phone_image/a54.png" alt="Product 2" style="width:150px; height:200px;">
              <div class="overlay">
-                 <a href="#" class="info">Learn More</a>
+                 <a href="a54.html" class="info">Learn More</a>
              </div>
              <h3>Samsung Galaxy A54 (5G)</h3>
          </div>
          <div class="product-card">
              <img src="phone_image/a14.png" alt="Product 3" style="width:150px; height:200px;">
              <div class="overlay">
-                 <a href="#" class="info">Learn More</a>
+                 <a href="a14.html" class="info">Learn More</a>
              </div>
              <h3>Samsung Galaxy A14 (5G)</h3>
          </div>
          <div class="product-card">
              <img src="phone_image/s21.png" alt="Product 4" style="width:100px; height:200px;">
              <div class="overlay">
-                 <a href="#" class="info">Learn More</a>
+                 <a href="s21.html" class="info">Learn More</a>
              </div>
              <h3>Samsung Galaxy S21 (5G)</h3>
          </div>        
      </div>
  </div>
 </div>
+<hr/>
 </header>
       
       <!-- end contact  section -->
@@ -525,15 +569,21 @@
                 </div>
             </div>
         </div>
-    </footer>     
-      <!-- end footer -->
-      <!-- Javascript files-->
-      <script src="js/jquery.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery-3.0.0.min.js"></script>
-      <!-- sidebar -->
-      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="js/custom.js"></script>
+    </footer>
+     <!-- Javascript files-->
+     <script src="js/jquery.min.js"></script>
+     <script src="js/popper.min.js"></script>
+     <script src="js/bootstrap.bundle.min.js"></script>
+     <script src="js/jquery-3.0.0.min.js"></script>
+     <!-- sidebar -->
+     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+     <script src="js/custom.js"></script>
+
+     <script>
+        document.getElementById('fileID').addEventListener('change', function() {
+           const fileName = this.files[0] ? this.files[0].name : 'No file chosen';
+           document.getElementById('fileName').textContent = fileName;
+        });
+     </script>
    </body>
 </html>
